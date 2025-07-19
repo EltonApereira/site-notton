@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mensagem Enviada</title>
+  <link rel="stylesheet" href="lib/css/style.css">
+  <style>
+    body {
+  /* IMAGEM DE FUNDO ADICIONADA AQUI */
+  background-image: url('lib/images/textura.avif'); /* <-- SUBSTITUA PELO CAMINHO REAL */
+  
+  /* Estilos para garantir que a imagem preencha a tela */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  /* Estilos que você já tinha (mantidos) */
+  color: #17910c;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+    h1 {
+      font-size: 32px;
+      color: #9b9108;
+    }
+
+    p {
+      font-size: 18px;
+      margin: 20px 0;
+    }
+
+    a.btn {
+background: linear-gradient(to right, #67b538, #fddc00, #67b538);      color: rgb(0, 0, 0);
+      padding: 12px 24px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    a.btn:hover {
+      background-color: #0077cc;
+    }
+  </style>
+</head>
+<body>
+  <h1>Obrigado pela sua mensagem!</h1>
+
+  <p>Recebemos seu contato e responderemos o mais breve possível.</p>
+
+  <a href="index.html" class="btn">Voltar ao Início</a>
+  <br><br>
+  <a href="https://www.instagram.com/criativosfull/" class="btn" target="_blank">Me siga no Instagram</a>
+   <!-- CÓDIGO DO GTRANSLATE ADICIONADO AQUI -->
+    <div class="gtranslate_wrapper"></div>
+    <script>window.gtranslateSettings = {"default_language":"pt","languages":["pt","en","de","it","fr","es"],"wrapper_selector":".gtranslate_wrapper","flag_size":24,"flag_style":"3d"}</script>
+    <script src="https://cdn.gtranslate.net/widgets/latest/flags.js" defer></script>
+</body>
+</html>
