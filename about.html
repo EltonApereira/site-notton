@@ -3,8 +3,9 @@
 
 <head>
   <meta charset="utf-8">  
-  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />    
-  <title>Sobre</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />  
+  <meta name="description" content="Conheça a história, a equipe e a filosofia da NottoN. Somos um estúdio de desenvolvimento web e design, criação de sites, landing pages, sistemas e soluções digitais sob medida dedicado a impulsionar negócios com soluções digitais. ">
+  <title>Sobre a NottoN | Estúdio de Design e Desenvolvimento Web</title>
 
   <!-- Favicon -->
   <link rel="shortcut icon" href="lib/images/favicon.png">
@@ -540,26 +541,30 @@
                                             
                                     <h5>Localização</h5>
                                                                 
-                                    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+                                     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
                                     <style>#map { height: 200px; width: 100%; border-radius: 10px; }</style>
                                     <div id="map"></div>
                                     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
                                     <script>
-                                        var coords = [-12.84844, -38.45301];
+                                        var coords = [-13.0122, -38.5326];
                                         var map = L.map('map').setView(coords, 17);
                                         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                                             attribution: '© OpenStreetMap contributors', maxZoom: 19
                                         }).addTo(map);
-                                        L.marker(coords).addTo(map).bindPopup('<b>Estamos aqui</b><br>Rua Brumado, Nova Brasília de Valéria').openPopup();
+                                        L.marker(coords).addTo(map).bindPopup('<b>Estamos aqui</b><br>Salvador-Ba Brasil').openPopup();
                                     </script>
-
                                     <!-- end map -->
                                     
                                     <!--begin footer_details -->
                                     <ul class="footer_details">
-                                        <li><i class="fas fa-map-marker-alt"></i>  R. Brumado-Nova Brasília de Valéria, Salvador - Bahia, Brasil - CEP: 41307-040</li>
-                                        <li><i class="icon-phone"></i>  +55 71 00000-0000 / +55 71 00000-0000</li>
+                                        <li><i class="fas fa-map-marker-alt"></i>Salvador - Bahia, Brasil - CEP: 40000-000</li>
+                                        <li><i class="icon-phone"></i>  +55 71 98420-4564 / +55 71 00000-0000</li>
                                         <li><a href="mailto:contact@undergroundteam.co.uk"><i class="fas fa-envelope"></i>   ton-raissa@hotmail.com</a></li>
+                                         <li>
+                                  <a href="https://www.salvadordabahia.com/" target="_blank">
+                                      <i class="icon-envelope-alt"></i> salvadordabahia.com
+                                  </a>
+                              </li>
                                     </ul>
                                     <!--end footer_details -->
                                     
