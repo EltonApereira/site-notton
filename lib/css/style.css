@@ -134,6 +134,7 @@ p.small_margin{
 
 .row {
 	width: 100%;
+	max-width:960px;
 	margin: 0 auto;
 	overflow: hidden;
 }
@@ -170,8 +171,7 @@ p.small_margin{
     font-weight: normal;
     font-style: normal;
 }
-
-/* Outras definições de @font-face... */
+/* Outras definições de @font-face... (mantidas como no original) */
 
 /* Headings
 ========================================================== */
@@ -285,6 +285,7 @@ body {
 	top:0;
 	background:url(../images/raster.png) repeat;
 	overflow:hidden;
+	z-index: -1; /* Garante que o fundo pontilhado fique atrás do conteúdo */
 }
 
 #main { width:100%; margin:0 auto; padding: 0; }
@@ -341,16 +342,15 @@ a#logo { position: relative; float:left; z-index:900; margin-top:12px; }
 #footer_top_inner{ width:100%; max-width:960px; margin:0 auto; }
 #footer_top_inner h5{ text-transform:uppercase; font-family: 'open_sansbold', Arial, Helvetica, sans-serif; }
 
-.footer_posts{ float:left; margin-bottom:20px; }
-.footer_posts a{ color:#acacac; font-size:12px; }
-.footer_posts a:hover{ color:#DD4A38; }
+.footer_posts{ float:left; margin-bottom:20px; width: 100%; }
+.footer_posts span { color:#acacac; font-size:12px; }
 span.footer_post_date{ color:#656565; font-style:italic; font-size:11px; display:block; padding-top:5px; }
 .footer_posts img{ width:70px; height:70px; float:left; margin-right:20px; }
 
-#footer_top_inner ul.photostream{ margin:5px 0 0 0; padding:0; list-style:none; }
+#footer_top_inner ul.photostream{ margin:5px 0 0 0; padding:0; list-style:none; overflow: hidden; }
 #footer_top_inner ul.photostream li{ float:left; margin:0!important; padding:0!important; }
-#footer_top_inner ul.photostream li a{ width:90px; height:90px; margin:0 5px 0 0!important; display: inline-block; }
-#footer_top_inner ul.photostream li a img{ float:left; margin:0!important; }
+#footer_top_inner ul.photostream li a{ width:90px; height:90px; margin:0 5px 5px 0!important; display: inline-block; }
+#footer_top_inner ul.photostream li a img{ float:left; margin:0!important; width: 100%; height: 100%; object-fit: cover; }
 
 #footer_bottom {
 	width:90%;
@@ -445,7 +445,7 @@ ul.team_social li:hover a{ color:#DD4A38; }
 /* Testimonials */
 /* ========================================================== */
 
-.testimonials_item{ width:100%; max-width:960px; float:left; margin-bottom: 30px; }
+.testimonials_item{ width:100%; float:left; margin-bottom: 30px; }
 .testimonials_item li { float: left; padding-bottom: 0; width: 100%; }
 .testimonials_item li.last { margin-right:0; }
 .testimonials_item li div { background-color:#1d1f21; border:1px solid #555; padding:15px 20px 20px 20px; position: relative; }
@@ -579,66 +579,85 @@ span.quotes_autor{ font-family: 'open_sanssemibold', Arial, Helvetica, sans-seri
 }
 
 /* ========================================================== */
-/* MOBILE */
+/* MOBILE (Media Query Unificado e Otimizado) */
 /* ========================================================== */
 @media handheld, only screen and (max-width: 767px) {
+	
+	/* Layout Geral */
 	#main { width:100%; margin:0 auto; padding: 0; position:relative; overflow:hidden; }
 	.row { width: 90%; min-width: 0; margin: 0 5%; padding: 0; }
-	.row .onecol, .row .twocol, .row .threecol, .row .fourcol, .row .fivecol, .row .sixcol, .row .sevencol, .row .eightcol, .row .ninecol, .row .tencol, .row .elevencol, .row .twelvecol { width: auto; float: none; margin: 0; padding: 0; clear:both; }
+	.row .onecol, .row .twocol, .row .threecol, .row .fourcol, .row .fivecol, .row .sixcol, .row .sevencol, .row .eightcol, .row .ninecol, .row .tencol, .row .elevencol, .row .twelvecol { width: 100%; float: none; margin: 0 0 20px 0; padding: 0; clear:both; }
 	
+	/* Cabeçalho e Navegação */
 	#header_wrapper { position: relative; }
 	#header_wrapper #header { position: relative; height:auto; padding:0; text-align:center; }
 	#header_wrapper a#logo{ position:relative; width:100%; text-align:center; margin:12px 0 2px 0; }
-	.tinynav { display: inline-block; width:100%; max-width:300px; margin:10px 0; border:1px solid #ddd; padding:5px; }
+	.tinynav { display: block; width:100%; max-width:300px; margin:10px auto; border:1px solid #ddd; padding:8px; font-size: 16px; }
     #nav { display: none; }
 	#top_contact{ display:none; }
 		
+	/* Rodapé */
 	#footer_wrapper { position: relative; text-align:center; }
 	ul.contact_icons li{ width:100%; text-align:center; }
 	
+	/* Intro e Home */
 	.intro{ padding: 50px 0 40px 0; }
 	.intro h2{ font-size:22px; line-height:24px; }
-
 	#home{ width:100%; height:auto; padding: 40px 0; text-align:center; background:rgba(25, 35, 45, 0.7); position:relative; z-index:10; }
-	h1.slogan{ margin:40px 0; font-size:28px; line-height:28px; }
-	h1.slogan span{ margin-bottom:40px; font-size:14px; line-height:14px; }
-	a.read_more{ padding:6px 18px; font-size:10px; line-height:10px; }
+	h1.slogan{ margin:40px 0; font-size:48px; line-height:1.2; } /* Ajuste de tamanho e linha */
+	h1.slogan span{ margin-bottom:40px; font-size:28px; line-height:1.2; } /* Ajuste de tamanho e linha */
+	a.read_more{ padding:10px 20px; font-size:14px; }
 	a.small_btn{ display:none; }
 	
-	#filter li{ float:left; margin:0 0 20px 5px; }
-
-	.portofolio_item_4col { float:left; width: 100%; padding:0; border:none; clear:both; }
+	/* Portfólio */
+	#filter li{ display: block; margin:0 0 10px 0; }
+	.portofolio_item_4col { width: 100%; padding:0; border:none; clear:both; }
 	
+	/* Sobre e Equipe */
 	.about_box{ padding:0 0 30px 0; }
 	.team_box{ padding-top:20px; }
-	.team_item{ width: 90%; padding:0 5%; margin-bottom:40px; }
-	
+	.team_item{ width: 100%; padding:0; margin-bottom:40px; }
 	#toggle-view { margin-bottom:30px; }
 
+	/* Serviços */
 	#services{ padding: 5px 0 0 0; }
 	.services_box{ padding-top:20px; }
+	
+	/* Contato */
 	.contact_wrapper{ padding-bottom: 50px; }
+    #g_map_380 { height: 300px; } /* Ajuste altura do mapa no mobile */
+
+    /* === OTIMIZAÇÃO DO FORMULÁRIO DE CONTATO === */
+    .left-input, 
+    .right-input, 
+    .full-input, 
+    textarea.contact-comment {
+        width: 96%; /* Deixa uma pequena margem */
+        float: none;
+        margin: 0 0 15px 0;
+        padding: 15px 2%; /* Aumenta a área de toque */
+        font-size: 16px; /* Evita o zoom automático no iOS */
+        box-sizing: border-box; /* Garante que padding não afete a largura */
+    }
+
+    input.contact-submit {
+        width: 100%;
+        padding: 15px;
+        font-size: 16px;
+    }
 }
 
-/* Para telas menores que 768px (smartphones) */
-@media (max-width: 767px) {
-  .twelvecol, .sevencol, .fivecol, .fourcol { width: 100% !important; float: none !important; margin: 0 0 20px 0 !important; }
-  #nav { display: block; text-align: center; }
-  .left-input, .right-input, .full-input { width: 100% !important; margin: 0 0 10px 0; }
-  .contact-submit { width: 100%; }
-  .footer_posts img, .photostream img { width: 100%; height: auto; }
-  #g_map_380 { height: 300px; }
-}
-
-/* Para tablets (768px a 1024px) */
+/* Para tablets (768px a 1024px) - um ajuste fino pode ser útil aqui */
 @media (min-width: 768px) and (max-width: 1024px) {
-  .left-input, .right-input { width: 48% !important; }
-  .full-input, .contact-submit { width: 100%; }
+  .row {
+    width: 95%; /* Usa um pouco mais da tela */
+  }
+  .left-input, .right-input { width: 48%; margin-right: 4%; } /* Ajusta espaçamento entre eles */
+  .left-input.last, .right-input.last { margin-right: 0; }
 }
 
 /* ========================================================= */
 /* CÓDIGO DE POSICIONAMENTO PARA O WIDGET GTRANSLATE   */
-/* (Funciona em todas as páginas)                          */
 /* ========================================================= */
 
 .gtranslate_wrapper {

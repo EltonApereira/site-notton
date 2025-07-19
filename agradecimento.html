@@ -1,32 +1,34 @@
-<!DOCTYPE html>
-<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO: Impede que esta página apareça nos resultados de busca (CORRETO) -->
   <meta name="robots" content="noindex, nofollow">
+  
   <title>Obrigado pelo Contato | NottoN Desenvolvimento Web</title>
-  <link rel="stylesheet" href="lib/css/style.css">
+  
+  <!-- Favicon para consistência da marca -->
+  <link rel="shortcut icon" href="lib/images/favicon.png">
+
+  <!-- Estilos essenciais para esta página (não carrega o style.css) -->
   <style>
     body {
-  /* IMAGEM DE FUNDO ADICIONADA AQUI */
-  background-image: url('lib/images/textura.avif'); /* <-- SUBSTITUA PELO CAMINHO REAL */
-  
-  /* Estilos para garantir que a imagem preencha a tela */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  
-  /* Estilos que você já tinha (mantidos) */
-  color: #17910c;
-  font-family: 'Poppins', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  text-align: center;
-  flex-direction: column;
-  padding: 20px;
-}
+      /* Imagem de fundo e estilos de layout */
+      background-image: url('lib/images/textura.avif');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: #17910c;
+      font-family: 'Poppins', sans-serif; /* Você pode adicionar um link para o Google Fonts se quiser usar esta fonte */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      flex-direction: column;
+      padding: 20px;
+      margin: 0;
+    }
 
     h1 {
       font-size: 32px;
@@ -39,16 +41,18 @@
     }
 
     a.btn {
-background: linear-gradient(to right, #67b538, #fddc00, #67b538);      color: rgb(0, 0, 0);
+      background: linear-gradient(to right, #67b538, #fddc00, #67b538);      
+      color: rgb(0, 0, 0);
       padding: 12px 24px;
       border-radius: 4px;
       text-decoration: none;
       font-weight: bold;
       transition: background 0.3s;
+      margin-bottom: 15px; /* Adicionado espaçamento */
     }
 
     a.btn:hover {
-      background-color: #0077cc;
+      background-color: #0077cc; /* Você pode querer ajustar esta cor de hover */
     }
   </style>
 </head>
