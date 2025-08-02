@@ -9,8 +9,8 @@
   <meta name="description" content="Transformamos suas ideias em realidade digital. Especialistas em criação de sites personalizados, web design, identidade visual e soluções web de alta performance.">
   <meta name="author" content="NottoN">
 
-  <!-- OTIMIZAÇÃO: Prioriza o carregamento da imagem de fundo principal para melhorar o LCP -->
-  <link rel="preload" as="image" href="lib/images/ft02.jpg">
+  <!-- OTIMIZAÇÃO: Prioriza o carregamento da imagem de fundo principal (Lembre-se de converter para .webp) -->
+  <link rel="preload" as="image" href="lib/images/ft02.webp">
 
   <!-- Favicon -->
   <link rel="shortcut icon" href="lib/images/favicon.png">
@@ -22,6 +22,8 @@
 
   <!-- Ícones (Font Awesome) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- OTIMIZAÇÃO: Pré-carrega o arquivo principal da fonte para exibição mais rápida -->
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
 
   <!-- Folhas de Estilo (CSS) do Site -->
   <link rel="stylesheet" href="lib/css/style.css">
@@ -30,13 +32,14 @@
   <link rel="stylesheet" href="lib/js/prettyPhoto/css/prettyPhoto.css" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="lib/js/prettyPhoto/css/prettyPhoto.css"></noscript>
   
-  <!-- Scripts (jQuery) -->
+  <!-- Scripts (jQuery) - Carregados no head para compatibilidade, mas a execução principal é adiada -->
   <script src="lib/js/jquery-1.10.2.min.js"></script>
   <script src="lib/js/jquery-migrate-1.2.1.js"></script>
 </head>
 
 <body>
-  <img class="vegas-background" src="lib/images/ft02.jpg" alt="Fundo da página com imagem de um avião sobrevoando montanhas" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; object-fit: cover; z-index: -1;">
+  <!-- LEMBRETE: Converta esta imagem para .webp para um carregamento mais rápido -->
+  <img class="vegas-background" src="lib/images/ft02.webp" alt="Fundo da página com imagem de um avião sobrevoando montanhas" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; object-fit: cover; z-index: -1;">
     <!--begin dotted_bg -->
 	<div id="dotted_bg"></div>
     <!--end dotted_bg -->
@@ -46,70 +49,36 @@
     
         <!--begin top_contact section -->
         <section id="top_contact">
-                                    
-            <!--begin top_contact_inner -->
             <div class="top_contact_inner">
-                                    
-                <!--begin row -->
                 <div class="row">
-                    
-                    <!--begin twelvecol -->
                     <div class="twelvecol"> 
-                            
-                        <!--begin fivecol -->
                         <div class="fivecol"> 
-                        
                             <ul class="social_details">
                                 <li><a href="https://wa.me/5571984204564" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i>  WhatsApp</a></li>
                                 <li><a href="https://www.instagram.com/nottonsites/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i>  Instagram</a></li>
                                 <li><a href="#"><i class="fab fa-facebook-f"></i>  Facebook</a></li>
                                 <li><a href="#"><i class="fab fa-youtube"></i> YouTube</a></li>
                             </ul>
-                             
                         </div>
-                        <!--end fivecol -->
-                        
-                        <!--begin sevencol -->
                         <div class="sevencol last"> 
-                        	
                             <ul class="company_details">
                                 <li><a href="mailto:ton-raissa@hotmail.com"><i class="fas fa-envelope"></i> ton-raissa@hotmail.com</a></li>
                                 <li><i class="fas fa-phone"></i>  +55 71 98420-4564</li>
                                <li><a href="https://www.google.com/maps?q=R.+Brumado+Cj+Rec+Lagoa,+23+-+Nova+Brasília+de+Valéria,+Ssa-Ba,+Brasil" target="_blank" rel="noopener"><i class="fas fa-map-marker-alt"></i>  R. Brumado Cj Rec da Lagoa, Ssa-Ba | Brasil</a></li>
                             </ul>
-                             
                         </div>
-                        <!--end sevencol -->
-                         
                 	</div>
-                    <!--end twelvecol -->
-                    
             	</div>
-                <!--end row -->
-                
             </div>
-            <!--end top_contact_inner -->
-            
         </section>
         <!--end top_contact section -->
         
         <!--begin header_wrapper -->
         <header id="header_wrapper">
-            
-            <!--begin header -->    
             <div id="header">
-                
-                <!--begin row -->
                 <div class="row">
-                    
-                    <!--begin twelvecol -->
                     <div class="twelvecol">  
-                    
-                        <!--begin logo -->            
                         <a href="index.html" id="logo"><img src="lib/images/logo-inicial.png" alt="Logo da NottoN" width="150" height="45"></a>
-                        <!--end logo -->
-                        
-                        <!--begin nav -->
                         <ul id="nav">
                             <li class="current"><a href="index.html"><i class="icon-home"></i><br>Início</a></li>
                             <li><a href="about.html"><i class="icon-user"></i><br>Sobre Nós</a></li>
@@ -117,126 +86,58 @@
                             <li><a href="blog.html"><i class="icon-cogs"></i><br>Blog</a></li>
                             <li class="last"><a href="contact.html"><i class="icon-envelope-alt"></i><br>Contato</a></li>
                         </ul>
-                        <!--end nav -->
-                                                
                     </div>
-                    <!--end twelvecol -->
-                
                 </div>
-                <!--end row -->
-                    
             </div>
-            <!--end header -->
-            
         </header>
         <!--end header_wrapper -->
 
         <!--begin home section -->
         <section id="home">
-        
         	<div class="home_box">
-                                        
-            <h1 class="slogan">Bem-vindo<br><br><span class="typing">Seu Negócio em um <br>Site de Alta Performance!</span></h1>                                
+                <h1 class="slogan">Bem-vindo<br><span class="typing">Um site de alta performance <br>para impulsionar o seu negócio!</span></h1>                                
             </div>
-                        
         </section>
         <!--end home section -->
         
         <!--begin services section -->
         <section id="services">
-        
-            <!--begin intro -->
             <div class="intro">
                 <h2 class="title">Projetamos sites tão únicos quanto suas ideias — sem fronteiras para a imaginação!</h2>
             </div>
-            <!--end intro -->
-            
-            <!--begin services_box -->
             <div class="services_box">
-                
-                <!--begin row -->
                 <div class="row">
-                    
-                    <!--begin twelvecol -->
                     <div class="twelvecol">
-                        
-                        <!--begin threecol -->
                         <div class="threecol services_item">
-                            <div class="icon_wrapper">
-                                <div class="icon_box">
-                                    <i class="icon-laptop icon-8x"></i>
-                                    <span class="services_arrow"></span>
-                                </div>
-                            </div>
+                            <div class="icon_wrapper"><div class="icon_box"><i class="icon-laptop icon-8x"></i><span class="services_arrow"></span></div></div>
                             <h2>Brand-Identidade da sua Marca</h2>
                             <p>Criamos identidades visuais que comunicam propósito, personalidade e posicionamento. Da criação do nome à definição de cores, tipografia e elementos gráficos, transformamos ideias em marcas fortes, memoráveis e alinhadas com os valores do seu negócio. Acreditamos que uma marca bem construída conecta, inspira confiança e diferencia você no mercado.</p>
                         </div>
-                        <!--end threecol -->
-                        
-                        <!--begin threecol -->
                         <div class="threecol services_item">
-                            <div class="icon_wrapper">
-                                <div class="icon_box">
-                                    <i class="icon-leaf icon-8x"></i>
-                                    <span class="services_arrow"></span>
-                                </div>
-                            </div>
+                            <div class="icon_wrapper"><div class="icon_box"><i class="icon-leaf icon-8x"></i><span class="services_arrow"></span></div></div>
                             <h2>Web design</h2>
                             <p>Desenvolvemos sites únicos, modernos e totalmente personalizados para representar a essência da sua marca. Criamos interfaces responsivas, intuitivas e visualmente impactantes, pensadas para converter visitantes em clientes e gerar autoridade digital. Com foco em experiência do usuário (UX) e design de alta performance, entregamos soluções que combinam estética, funcionalidade e resultado real.</p>
                         </div>
-                        <!--end threecol -->
-                        
-                        <!--begin threecol -->
                         <div class="threecol services_item">
-                            <div class="icon_wrapper">
-                                <div class="icon_box">
-                                    <i class="icon-volume-up icon-8x"></i>
-                                    <span class="services_arrow"></span>
-                                </div>
-                            </div>
+                            <div class="icon_wrapper"><div class="icon_box"><i class="icon-volume-up icon-8x"></i><span class="services_arrow"></span></div></div>
                             <h2>Desenvolvimento Web</h2>
                             <p>Criamos soluções digitais sob medida que transformam ideias em sistemas inteligentes, funcionais e escaláveis. Utilizamos as tecnologias mais atuais para desenvolver sites, sistemas web, landing pages e plataformas com alta performance, segurança e flexibilidade. No front-end, entregamos código limpo, rápido e otimizado — sempre com foco em resultado e experiência do usuário.</p>
                         </div>
-                        <!--end threecol -->
-                        
-                        <!--begin threecol -->
                         <div class="threecol last services_item">
-                            <div class="icon_wrapper">
-                                <div class="icon_box">
-                                    <i class="icon-comments icon-8x"></i>
-                                    <span class="services_arrow"></span>
-                                </div>
-                            </div>
+                            <div class="icon_wrapper"><div class="icon_box"><i class="icon-comments icon-8x"></i><span class="services_arrow"></span></div></div>
                             <h2>Suporte</h2>
                             <p>Suporte 24 horas por dia, 7 dias por semana. Nosso compromisso vai além da entrega. Oferecemos suporte contínuo para manter seu site, sistema ou plataforma sempre atualizados, seguros e funcionando com excelência. Atuamos com rapidez, clareza e responsabilidade para garantir sua tranquilidade digital.</p>
                         </div>
-                        <!--end threecol -->
-                        
                     </div>
-                    <!--end twelvecol -->
-                    
                 </div>
-                <!--end row -->
-                
-                <!--begin row -->
                 <div class="row">
-                    
-                    <!--begin twelvecol -->
                     <div class="twelvecol vertical_line">
-                        <a class="button_red scroll_btn" 
-                            href="https://docs.google.com/forms/d/e/1FAIpQLSdIVbs8_eUMnMKveJlipW5cEGrG0yxu7qQm1CENLdulgf3XnQ/viewform" 
-                            target="_blank" rel="noopener">
+                        <a class="button_red scroll_btn" href="https://docs.google.com/forms/d/e/1FAIpQLSdIVbs8_eUMnMKveJlipW5cEGrG0yxu7qQm1CENLdulgf3XnQ/viewform" target="_blank" rel="noopener">
                             Solicite um Orçamento
                         </a>  
                     </div>
-                    <!--end twelvecol -->
-                    
                 </div>
-                <!--end row -->
-                
             </div>
-            <!--end services_box -->
-            
         </section>
         <!--end services section -->
         
@@ -255,38 +156,13 @@
     
         <!--begin footer -->
         <footer id="footer_wrapper">
-            
-            <!-- ============================================= -->
-            <!-- === ÁREA DO RODAPÉ SUPERIOR FOI REMOVIDA === -->
-            <!--      Este é o espaço para suas 3 imagens      -->
-            <!-- ============================================= -->
-
-            <!--begin footer_bottom -->
             <div id="footer_bottom">
-            	
-                <!--begin row -->
                 <div class="row">
-                    
-                    <!--begin twelvecol -->
                     <div class="twelvecol">  
-                        
-                         <!--begin copyright -->            
-                        <p class="copyright">
-                          Copyright © 2025 NottoN Desenvolvimento Web | Todos os Direitos Reservados |
-                          <a href="termos.html" target="_blank" rel="noopener">Termos e Condições</a>
-                            <a href="privacidade.html"> | Política de Privacidade</a>
-                       </p>
-                        <!--end copyright -->
-                        
+                        <p class="copyright">Copyright © 2025 NottoN Desenvolvimento Web | Todos os Direitos Reservados | <a href="termos.html" target="_blank" rel="noopener">Termos e Condições</a><a href="privacidade.html"> | Política de Privacidade</a></p>
                     </div>
-                    <!--end twelvecol -->
-                    
                 </div>
-                <!--end row -->
-                
             </div>
-            <!--end footer_bottom -->
-            
         </footer>
         <!--end footer_wrapper -->
            
@@ -307,34 +183,23 @@
     <script src="lib/js/jquery.vegas.js" defer></script>
     <script src="https://unpkg.com/leaflet/dist/leaflet.js" defer></script>
     
-    <!-- Scripts inline movidos para o final e envolvidos em um listener para aguardar o DOM -->
+    <!-- Scripts inline -->
     <script>
     document.addEventListener("DOMContentLoaded", function() {
-        
-        // Menu color script
         $('#nav').onePageNav({
             filter: ':not(.external)',
             scrollThreshold: 0.25
         });
-
-        // Responsive menu script
         $('#nav').tinyNav({
             header: '-- Navigation --'
         });
-
-        // jQuery.sticky script
         $("#header_wrapper").sticky({ topSpacing: 0 });
-
-        // Placeholder script
         $.placeholder.shim();
-
-        // Slider script
         $("#slider4, #slider3").responsiveSlides({
             auto: true, pager: false, nav: true, pause: true, speed: 500,
             timeout: 9000, namespace: "callbacks"
         });
-
-        // Background slideshow script
+        // Lembrete: Converta as imagens de fundo do slideshow para .webp
         $.vegas('slideshow', {
             backgrounds:[
                 { src:'lib/images/bg02.webp', fade:1500 },

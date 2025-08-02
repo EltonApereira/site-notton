@@ -9,8 +9,8 @@
   <meta name="description" content="Conheça a história, a equipe e a filosofia da NottoN. Somos um estúdio de desenvolvimento web e design dedicado a impulsionar negócios com soluções digitais.">
   <meta name="author" content="NottoN">
   
-  <!-- OTIMIZAÇÃO: Prioriza o carregamento da imagem de fundo -->
-  <link rel="preload" as="image" href="lib/images/ft02.jpg">
+  <!-- OTIMIZAÇÃO: Prioriza o carregamento da imagem de fundo (Lembre-se de converter para .webp) -->
+  <link rel="preload" as="image" href="lib/images/ft02.webp">
 
   <!-- Favicon -->
   <link rel="shortcut icon" href="lib/images/favicon.png">
@@ -22,6 +22,8 @@
   
   <!-- Ícones (Font Awesome) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- OTIMIZAÇÃO: Pré-carrega o arquivo principal da fonte para exibição mais rápida -->
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
 
   <!-- Folhas de Estilo (CSS) do Site -->
   <link rel="stylesheet" href="lib/css/style.css">
@@ -39,14 +41,14 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" media="print" onload="this.media='all'" />
   <noscript><link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" /></noscript>
 
-
   <!-- Scripts (jQuery) -->
   <script src="lib/js/jquery-1.10.2.min.js"></script>
   <script src="lib/js/jquery-migrate-1.2.1.js"></script>
 </head>
 
 <body>
-  <img class="vegas-background" src="lib/images/ft02.jpg" alt="Fundo da página com imagem de um avião sobrevoando montanhas" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; object-fit: cover; z-index: -1;">
+  <!-- LEMBRETE: Converta esta imagem para .webp para um carregamento mais rápido -->
+  <img class="vegas-background" src="lib/images/ft02.webp" alt="Fundo da página com imagem de um avião sobrevoando montanhas" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; object-fit: cover; z-index: -1;">
     <!--begin dotted_bg -->
 	<div id="dotted_bg"></div>
     <!--end dotted_bg -->
@@ -106,13 +108,14 @@
             </div>
                                 
             <div class="callbacks_container">
+                <!-- OTIMIZAÇÃO: Removido loading="lazy" da primeira imagem do slider. Lembre-se de converter todas para .webp -->
                 <ul class="rslides" id="slider4">
-                    <li><img src="lib/images/amarelo-car.jpg" alt="carro amarelo com pessoas" width="960" height="400"></li>
+                    <li><img src="lib/images/amarelo-car.webp" alt="carro amarelo com pessoas" width="960" height="400"></li>
                     <li><img src="lib/images/amarelo-mule02.webp" alt="mulher em carro" width="960" height="400" loading="lazy"></li>
-                    <li><img src="lib/images/jornal-notton.png" alt="jornal da notton" width="960" height="400" loading="lazy"></li>
-                    <li><img src="lib/images/amarelo-muler.jpg" alt="mulher sentada" width="960" height="400" loading="lazy"></li>
-                    <li><img src="lib/images/mmulher-sentada.png" alt="outra mulher sentada" width="960" height="400" loading="lazy"></li>
-                    <li><img src="lib/images/carrão.png" alt="carro de luxo" width="960" height="400" loading="lazy"></li>
+                    <li><img src="lib/images/jornal-notton.webp" alt="jornal da notton" width="960" height="400" loading="lazy"></li>
+                    <li><img src="lib/images/amarelo-muler.webp" alt="mulher sentada" width="960" height="400" loading="lazy"></li>
+                    <li><img src="lib/images/mmulher-sentada.webp" alt="outra mulher sentada" width="960" height="400" loading="lazy"></li>
+                    <li><img src="lib/images/carrão.webp" alt="carro de luxo" width="960" height="400" loading="lazy"></li>
                 </ul>
             </div>
             
@@ -157,8 +160,9 @@
                     <div class="fourcol">
                         <div class="team_item">
                             <div class="view view-first">
-                                <a href="lib/images/colabor.png" class="prettyPhoto[gallery3]">
-                                    <img src="lib/images/colabor.png" alt="Elton Pereira" width="307" height="200">
+                                <!-- OTIMIZAÇÃO: Removido loading="lazy", pois esta imagem é visível no carregamento -->
+                                <a href="lib/images/colabor.webp" class="prettyPhoto[gallery3]">
+                                    <img src="lib/images/colabor.webp" alt="Elton Pereira" width="307" height="200">
                                     <span class="mask"><span class="zoom"></span></span>
                                 </a>
                             </div>
@@ -178,8 +182,8 @@
                     <div class="fourcol">
                         <div class="team_item">
                             <div class="view view-first">
-                                <a href="lib/images/colaborador-02.png" class="prettyPhoto[gallery3]">
-                                    <img src="lib/images/colaborador-02.png" alt="Yuri Avellar" width="307" height="200">
+                                <a href="lib/images/colaborador-02.webp" class="prettyPhoto[gallery3]">
+                                    <img src="lib/images/colaborador-02.webp" alt="Yuri Avellar" width="307" height="200">
                                     <span class="mask"><span class="zoom"></span></span>
                                 </a>
                             </div>
@@ -195,8 +199,8 @@
                     <div class="fourcol last">
                         <div class="team_item">
                             <div class="view view-first">
-                                <a href="lib/images/colaborador03.png" class="prettyPhoto[gallery3]">
-                                    <img src="lib/images/colaborador03.png" alt="Rafael Souza" width="307" height="200">
+                                <a href="lib/images/colaborador03.webp" class="prettyPhoto[gallery3]">
+                                    <img src="lib/images/colaborador03.webp" alt="Rafael Souza" width="307" height="200">
                                     <span class="mask"><span class="zoom"></span></span>
                                 </a>
                             </div>
@@ -221,21 +225,22 @@
                         <div class="twelvecol">  
                             <div class="fourcol">
                                 <h5>Projetos recentes</h5>
-                                <div class="footer_posts"><a><img src="lib/images/video-spa.png" alt="Demonstração de site para spa" width="70" height="70"></a><a> Site - Modelo de spa de beleza e resort</a><span class="footer_post_date"> 2023 </span></div>
-                                <div class="footer_posts"><a><img src="lib/images/video-salao.png" alt="Demonstração de site para salão de beleza" width="70" height="70"></a><a>Site - Modelo  de salão de beleza</a><span class="footer_post_date"> 2024 </span></div>
-                                <div class="footer_posts"><a><img src="lib/images/portfolio-pessoal.png" alt="Demonstração de site de portfólio pessoal" width="70" height="70"></a><a> Site - Modelo Portfólio pessoal</a><span class="footer_post_date">2025</span></div>
-                                <div class="footer_posts"><a><img src="lib/images/portfolio.png" alt="Outra demonstração de site de portfólio" width="70" height="70"></a><a> Site - Modelo Portfólio pessoal</a><span class="footer_post_date">2025</span></div>
+                                <!-- OTIMIZAÇÃO: Removido loading="lazy" de imagens no rodapé -->
+                                <div class="footer_posts"><a><img src="lib/images/video-spa.webp" alt="Demonstração de site para spa" width="70" height="70"></a><a> Site - Modelo de spa de beleza e resort</a><span class="footer_post_date"> 2023 </span></div>
+                                <div class="footer_posts"><a><img src="lib/images/video-salao.webp" alt="Demonstração de site para salão de beleza" width="70" height="70"></a><a>Site - Modelo  de salão de beleza</a><span class="footer_post_date"> 2024 </span></div>
+                                <div class="footer_posts"><a><img src="lib/images/portfolio-pessoal.webp" alt="Demonstração de site de portfólio pessoal" width="70" height="70"></a><a> Site - Modelo Portfólio pessoal</a><span class="footer_post_date">2025</span></div>
+                                <div class="footer_posts"><a><img src="lib/images/portfolio.webp" alt="Outra demonstração de site de portfólio" width="70" height="70"></a><a> Site - Modelo Portfólio pessoal</a><span class="footer_post_date">2025</span></div>
                             </div>
                             <div class="fourcol">
                                 <h5>Fluxo de fotos</h5>
                                 <ul class="photostream">
-                                    <li><a href="lib/fluxo-de-fotos/20.jpg" class="prettyPhoto[gallery3]"><img src="lib/fluxo-de-fotos/20.jpg" alt="Fluxo de fotos 1" width="90" height="90" loading="lazy"></a></li>
-                                    <li><a href="lib/fluxo-de-fotos/21.jpg" class="prettyPhoto[gallery3]"><img src="lib/fluxo-de-fotos/21.jpg" alt="Fluxo de fotos 2" width="90" height="90" loading="lazy"></a></li>
-                                    <li><a href="lib/fluxo-de-fotos/00.jpg" class="prettyPhoto[gallery3]"><img src="lib/fluxo-de-fotos/00.jpg" alt="Fluxo de fotos 3" width="90" height="90" loading="lazy"></a></li>
-                                    <li><a href="lib/fluxo-de-fotos/000.jpg" class="prettyPhoto[gallery3]"><img src="lib/fluxo-de-fotos/000.jpg" alt="Fluxo de fotos 4" width="90" height="90" loading="lazy"></a></li>
-                                    <li><a href="lib/fluxo-de-fotos/0001.jpg" class="prettyPhoto[gallery3]"><img src="lib/fluxo-de-fotos/0001.jpg" alt="Fluxo de fotos 5" width="90" height="90" loading="lazy"></a></li>
-                                    <li><a href="lib/fluxo-de-fotos/0002.jpg" class="prettyPhoto[gallery3]"><img src="lib/fluxo-de-fotos/0002.jpg" alt="Fluxo de fotos 6" width="90" height="90" loading="lazy"></a></li>
-                                    <li><a href="lib/fluxo-de-fotos/0004.jpg" class="prettyPhoto[gallery3]"><img src="lib/fluxo-de-fotos/0004.jpg" alt="Fluxo de fotos 7" width="90" height="90" loading="lazy"></a></li>
+                                    <li><a href="lib/fluxo-de-fotos/20.webp" class="prettyPhoto[gallery3]"><img src="lib/fluxo-de-fotos/20.webp" alt="Fluxo de fotos 1" width="90" height="90"></a></li>
+                                    <li><a href="lib/fluxo-de-fotos/21.webp" class="prettyPhoto[gallery3]"><img src="lib/fluxo-de-fotos/21.webp" alt="Fluxo de fotos 2" width="90" height="90"></a></li>
+                                    <li><a href="lib/fluxo-de-fotos/00.webp" class="prettyPhoto[gallery3]"><img src="lib/fluxo-de-fotos/00.webp" alt="Fluxo de fotos 3" width="90" height="90"></a></li>
+                                    <li><a href="lib/fluxo-de-fotos/000.webp" class="prettyPhoto[gallery3]"><img src="lib/fluxo-de-fotos/000.webp" alt="Fluxo de fotos 4" width="90" height="90" loading="lazy"></a></li>
+                                    <li><a href="lib/fluxo-de-fotos/0001.webp" class="prettyPhoto[gallery3]"><img src="lib/fluxo-de-fotos/0001.webp" alt="Fluxo de fotos 5" width="90" height="90" loading="lazy"></a></li>
+                                    <li><a href="lib/fluxo-de-fotos/0002.webp" class="prettyPhoto[gallery3]"><img src="lib/fluxo-de-fotos/0002.webp" alt="Fluxo de fotos 6" width="90" height="90" loading="lazy"></a></li>
+                                    <li><a href="lib/fluxo-de-fotos/0004.webp" class="prettyPhoto[gallery3]"><img src="lib/fluxo-de-fotos/0004.webp" alt="Fluxo de fotos 7" width="90" height="90" loading="lazy"></a></li>
                                 </ul>
                             </div>
                             <div class="fourcol last">
@@ -289,24 +294,15 @@
         }).addTo(map);
         L.marker(coords).addTo(map).bindPopup('<b>Estamos aqui</b><br>Salvador-Ba Brasil').openPopup();
 
-        // Menu color script
-        $('#nav').onePageNav({
-            filter: ':not(.external)',
-            scrollThreshold: 0.25
-        });
-
-        // Responsive menu script
-        $('#nav').tinyNav({
-            header: '-- Navigation --'
-        });
-
-        // jQuery.sticky script
+        // Menu
+        $('#nav').onePageNav({ filter: ':not(.external)', scrollThreshold: 0.25 });
+        $('#nav').tinyNav({ header: '-- Navigation --' });
         $("#header_wrapper").sticky({ topSpacing: 0 });
 
-        // Placeholder script
+        // Placeholders
         $.placeholder.shim();
 
-        // Slider script
+        // Sliders
         $("#slider4, #slider3").responsiveSlides({
             auto: true, pager: false, nav: true, pause: true, speed: 500,
             timeout: 9000, namespace: "callbacks"

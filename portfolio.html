@@ -6,8 +6,8 @@
   <meta name="description" content="Explore nosso portfólio de web design. Veja exemplos de sites, lojas virtuais, portais e landing pages que desenvolvemos para diversos segmentos de negócio.">  
   <title>Portfólio | Projetos de Criação de Sites e Web Design da NottoN</title>
 
-  <!-- OTIMIZAÇÃO: Prioriza o carregamento da imagem de fundo -->
-  <link rel="preload" as="image" href="lib/images/ft02.jpg">
+  <!-- OTIMIZAÇÃO: Prioriza o carregamento da imagem de fundo (Lembre-se de converter para .webp) -->
+  <link rel="preload" as="image" href="lib/images/ft02.webp">
 
   <!-- Favicon -->
   <link rel="shortcut icon" href="lib/images/favicon.png">
@@ -16,28 +16,27 @@
     <link rel="stylesheet" href="lib/css/ie.css" type="text/css" media="screen" />
   <![endif]-->
 
-  <!-- CSS -->
+  <!-- Ícones e CSS Essencial -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- OTIMIZAÇÃO: Pré-carrega o arquivo principal da fonte para exibição mais rápida -->
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+  
   <link rel="stylesheet" href="lib/css/style.css">
-  <link rel="stylesheet" href="lib/css/isotope.css"> <!-- Essencial para o layout do portfólio, não adiar -->
+  <!-- O Isotope CSS é crítico para o layout inicial do portfólio, por isso não é adiado -->
+  <link rel="stylesheet" href="lib/css/isotope.css">
   
   <!-- OTIMIZAÇÃO: CSS não essencial carregado de forma assíncrona -->
   <link href="lib/css/responsiveslides.css" rel="stylesheet" media="print" onload="this.media='all'">
   <noscript><link href="lib/css/responsiveslides.css" rel="stylesheet"></noscript>
-  
   <link rel="stylesheet" href="lib/js/prettyPhoto/css/prettyPhoto.css" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="lib/js/prettyPhoto/css/prettyPhoto.css"></noscript>
   
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-  <!-- ==================================================================== -->
-  <!-- === CORREÇÃO: Remove o efeito de fade ao passar o mouse nos vídeos === -->
-  <!-- ==================================================================== -->
   <style>
+    /* Remove o efeito de fade nos vídeos para evitar problemas de performance */
     .view-first .mask {
       transition: none !important;
     }
   </style>
-  <!-- ==================================================================== -->
 
   <!-- jQuery -->
   <script src="lib/js/jquery-1.10.2.min.js"></script>
@@ -45,7 +44,8 @@
 </head>
 
 <body>
-  <img class="vegas-background" src="lib/images/ft02.jpg" alt="Fundo da página com imagem de um avião sobrevoando montanhas" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; object-fit: cover; z-index: -1;">
+  <!-- Lembrete: Converta a imagem de fundo para .webp -->
+  <img class="vegas-background" src="lib/images/ft02.webp" alt="Fundo da página com imagem de um avião sobrevoando montanhas" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; object-fit: cover; z-index: -1;">
     <div id="dotted_bg"></div>
 	
     <div id="container">
@@ -128,7 +128,6 @@
         </section>
         
         <footer id="footer_wrapper">
-          
             <div id="footer_bottom">
                 <div class="row">
                     <div class="twelvecol">  
@@ -153,23 +152,18 @@
     <script src="lib/js/responsiveslides.min.js" defer></script>
     <script src="https://unpkg.com/leaflet/dist/leaflet.js" defer></script>
     
-    <!-- Scripts inline -->
+    <!-- Scripts inline unificados e executados após o DOM carregar -->
     <script>
     document.addEventListener("DOMContentLoaded", function() {
         // Menu
-        $('#nav').onePageNav({
-            filter: ':not(.external)',
-            scrollThreshold: 0.25
-        });
-        $('#nav').tinyNav({
-            header: '-- Navigation --'
-        });
+        $('#nav').onePageNav({ filter: ':not(.external)', scrollThreshold: 0.25 });
+        $('#nav').tinyNav({ header: '-- Navigation --' });
         $("#header_wrapper").sticky({ topSpacing: 0 });
 
         // Placeholder
         $.placeholder.shim();
 
-        // Sliders
+        // Sliders (se houver algum slider nesta página)
         $("#slider4, #slider3").responsiveSlides({
             auto: true, pager: false, nav: true, pause: true, speed: 500,
             timeout: 9000, namespace: "callbacks"
