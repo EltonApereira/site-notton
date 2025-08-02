@@ -25,9 +25,20 @@
 
   <!-- Folhas de Estilo (CSS) do Site -->
   <link rel="stylesheet" href="lib/css/style.css">
-  <link rel="stylesheet" href="lib/css/isotope.css">
-  <link href="lib/css/responsiveslides.css" rel="stylesheet">
-  <link rel="stylesheet" href="lib/js/prettyPhoto/css/prettyPhoto.css">
+  
+  <!-- OTIMIZAÇÃO: CSS não essencial carregado de forma assíncrona -->
+  <link rel="stylesheet" href="lib/css/isotope.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="lib/css/isotope.css"></noscript>
+  
+  <link href="lib/css/responsiveslides.css" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="lib/css/responsiveslides.css" rel="stylesheet"></noscript>
+  
+  <link rel="stylesheet" href="lib/js/prettyPhoto/css/prettyPhoto.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="lib/js/prettyPhoto/css/prettyPhoto.css"></noscript>
+  
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" /></noscript>
+
 
   <!-- Scripts (jQuery) -->
   <script src="lib/js/jquery-1.10.2.min.js"></script>
@@ -96,7 +107,7 @@
                                 
             <div class="callbacks_container">
                 <ul class="rslides" id="slider4">
-                    <li><img src="lib/images/amarelo-car.jpg" alt="carro amarelo com pessoas" width="960" height="400" loading="lazy"></li>
+                    <li><img src="lib/images/amarelo-car.jpg" alt="carro amarelo com pessoas" width="960" height="400"></li>
                     <li><img src="lib/images/amarelo-mule02.webp" alt="mulher em carro" width="960" height="400" loading="lazy"></li>
                     <li><img src="lib/images/jornal-notton.png" alt="jornal da notton" width="960" height="400" loading="lazy"></li>
                     <li><img src="lib/images/amarelo-muler.jpg" alt="mulher sentada" width="960" height="400" loading="lazy"></li>
@@ -147,7 +158,7 @@
                         <div class="team_item">
                             <div class="view view-first">
                                 <a href="lib/images/colabor.png" class="prettyPhoto[gallery3]">
-                                    <img src="lib/images/colabor.png" alt="Elton Pereira" width="307" height="200" loading="lazy">
+                                    <img src="lib/images/colabor.png" alt="Elton Pereira" width="307" height="200">
                                     <span class="mask"><span class="zoom"></span></span>
                                 </a>
                             </div>
@@ -168,7 +179,7 @@
                         <div class="team_item">
                             <div class="view view-first">
                                 <a href="lib/images/colaborador-02.png" class="prettyPhoto[gallery3]">
-                                    <img src="lib/images/colaborador-02.png" alt="Yuri Avellar" width="307" height="200" loading="lazy">
+                                    <img src="lib/images/colaborador-02.png" alt="Yuri Avellar" width="307" height="200">
                                     <span class="mask"><span class="zoom"></span></span>
                                 </a>
                             </div>
@@ -185,7 +196,7 @@
                         <div class="team_item">
                             <div class="view view-first">
                                 <a href="lib/images/colaborador03.png" class="prettyPhoto[gallery3]">
-                                    <img src="lib/images/colaborador03.png" alt="Rafael Souza" width="307" height="200" loading="lazy">
+                                    <img src="lib/images/colaborador03.png" alt="Rafael Souza" width="307" height="200">
                                     <span class="mask"><span class="zoom"></span></span>
                                 </a>
                             </div>
@@ -210,10 +221,10 @@
                         <div class="twelvecol">  
                             <div class="fourcol">
                                 <h5>Projetos recentes</h5>
-                                <div class="footer_posts"><a><img src="lib/images/video-spa.png" alt="Demonstração de site para spa" width="70" height="70" loading="lazy"></a><a> Site - Modelo de spa de beleza e resort</a><span class="footer_post_date"> 2023 </span></div>
-                                <div class="footer_posts"><a><img src="lib/images/video-salao.png" alt="Demonstração de site para salão de beleza" width="70" height="70" loading="lazy"></a><a>Site - Modelo  de salão de beleza</a><span class="footer_post_date"> 2024 </span></div>
-                                <div class="footer_posts"><a><img src="lib/images/portfolio-pessoal.png" alt="Demonstração de site de portfólio pessoal" width="70" height="70" loading="lazy"></a><a> Site - Modelo Portfólio pessoal</a><span class="footer_post_date">2025</span></div>
-                                <div class="footer_posts"><a><img src="lib/images/portfolio.png" alt="Outra demonstração de site de portfólio" width="70" height="70" loading="lazy"></a><a> Site - Modelo Portfólio pessoal</a><span class="footer_post_date">2025</span></div>
+                                <div class="footer_posts"><a><img src="lib/images/video-spa.png" alt="Demonstração de site para spa" width="70" height="70"></a><a> Site - Modelo de spa de beleza e resort</a><span class="footer_post_date"> 2023 </span></div>
+                                <div class="footer_posts"><a><img src="lib/images/video-salao.png" alt="Demonstração de site para salão de beleza" width="70" height="70"></a><a>Site - Modelo  de salão de beleza</a><span class="footer_post_date"> 2024 </span></div>
+                                <div class="footer_posts"><a><img src="lib/images/portfolio-pessoal.png" alt="Demonstração de site de portfólio pessoal" width="70" height="70"></a><a> Site - Modelo Portfólio pessoal</a><span class="footer_post_date">2025</span></div>
+                                <div class="footer_posts"><a><img src="lib/images/portfolio.png" alt="Outra demonstração de site de portfólio" width="70" height="70"></a><a> Site - Modelo Portfólio pessoal</a><span class="footer_post_date">2025</span></div>
                             </div>
                             <div class="fourcol">
                                 <h5>Fluxo de fotos</h5>
@@ -229,7 +240,6 @@
                             </div>
                             <div class="fourcol last">
                                 <h5>Localização</h5>
-                                <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
                                 <style>#map { height: 200px; width: 100%; border-radius: 10px; }</style>
                                 <div id="map"></div>
                                 <ul class="footer_details">

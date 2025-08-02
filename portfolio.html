@@ -18,9 +18,15 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="lib/css/style.css">
-  <link rel="stylesheet" href="lib/css/isotope.css">
-  <link href="lib/css/responsiveslides.css" rel="stylesheet">
-  <link rel="stylesheet" href="lib/js/prettyPhoto/css/prettyPhoto.css">
+  <link rel="stylesheet" href="lib/css/isotope.css"> <!-- Essencial para o layout do portfólio, não adiar -->
+  
+  <!-- OTIMIZAÇÃO: CSS não essencial carregado de forma assíncrona -->
+  <link href="lib/css/responsiveslides.css" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="lib/css/responsiveslides.css" rel="stylesheet"></noscript>
+  
+  <link rel="stylesheet" href="lib/js/prettyPhoto/css/prettyPhoto.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="lib/js/prettyPhoto/css/prettyPhoto.css"></noscript>
+  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <!-- ==================================================================== -->
@@ -150,14 +156,6 @@
     <!-- Scripts inline -->
     <script>
     document.addEventListener("DOMContentLoaded", function() {
-        // Mapa Leaflet
-        var coords = [-13.0122, -38.5326];
-        var map = L.map('map').setView(coords, 17);
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '© OpenStreetMap contributors', maxZoom: 19
-        }).addTo(map);
-        L.marker(coords).addTo(map).bindPopup('<b>Estamos aqui</b><br>Salvador-Ba Brasil').openPopup();
-
         // Menu
         $('#nav').onePageNav({
             filter: ':not(.external)',

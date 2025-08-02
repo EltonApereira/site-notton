@@ -25,7 +25,10 @@
 
   <!-- Folhas de Estilo (CSS) do Site -->
   <link rel="stylesheet" href="lib/css/style.css">
-  <link rel="stylesheet" href="lib/js/prettyPhoto/css/prettyPhoto.css">
+  
+  <!-- OTIMIZAÇÃO: CSS não essencial carregado de forma assíncrona -->
+  <link rel="stylesheet" href="lib/js/prettyPhoto/css/prettyPhoto.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="lib/js/prettyPhoto/css/prettyPhoto.css"></noscript>
   
   <!-- Scripts (jQuery) -->
   <script src="lib/js/jquery-1.10.2.min.js"></script>

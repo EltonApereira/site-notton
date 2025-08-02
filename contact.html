@@ -20,13 +20,16 @@
 
   <!-- Folhas de Estilo (CSS) do Site -->
   <link rel="stylesheet" href="lib/css/style.css">
-  <link href="lib/css/responsiveslides.css" rel="stylesheet">
-  <link rel="stylesheet" href="lib/js/prettyPhoto/css/prettyPhoto.css">
   
-  <!--
-    O link para isotope.css foi removido porque essa funcionalidade (portfólio filtrável)
-    não está nesta página, melhorando a velocidade de carregamento.
-  -->
+  <!-- OTIMIZAÇÃO: CSS não essencial carregado de forma assíncrona -->
+  <link href="lib/css/responsiveslides.css" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="lib/css/responsiveslides.css" rel="stylesheet"></noscript>
+  
+  <link rel="stylesheet" href="lib/js/prettyPhoto/css/prettyPhoto.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="lib/js/prettyPhoto/css/prettyPhoto.css"></noscript>
+  
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" media="print" onload="this.media='all'"/>
+  <noscript><link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/></noscript>
 
   <!-- Scripts (jQuery) -->
   <script src="lib/js/jquery-1.10.2.min.js"></script>
@@ -158,28 +161,10 @@
         <!--begin contact section -->
         <section id="contact">
                 
-                      <!-- begin map -->
-                      <!-- CSS e JS do Leaflet -->
-          <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-          <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-
           <!-- Mapa -->
           <div class="wt_gMap">
             <div id="g_map_380" style="height: 450px;"></div>
           </div>
-
-          <script>
-            var map = L.map('g_map_380').setView([-12.9143, -38.4578], 16); // Coordenadas ajustadas para Salvador, Bahia
-
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-              attribution: '&copy; <a href="https://openstreetmap.org">OpenStreetMap</a> contributors'
-            }).addTo(map);
-
-            L.marker([-12.9143, -38.4578]).addTo(map) // Coordenadas ajustadas para Salvador
-              .bindPopup("Salvador, Bahia, Brasil")
-              .openPopup();
-          </script>
-
 
             <!-- end map -->
             
@@ -203,48 +188,47 @@
                                 <p>Tem um projeto em mente ou quer tirar alguma dúvida?. Estamos à disposição para conversar sobre ideias, orçamentos, parcerias ou qualquer outro assunto. Será um prazer responder você!</p>
                                 
                                 <!--begin contact form -->
-<form action="https://formsubmit.co/ton-raissa@hotmail.com" method="POST" class="contact">
-  <!-- Proteção contra spam -->
-  <input type="hidden" name="_captcha" value="false">
-
-  <!-- Redirecionamento para a página de agradecimento -->
-<input type="hidden" name="_next" value="https://eltonapereira.github.io/site-notton/agradecimento.html">
-  <!-- Campos do formulário -->
-  <div class="twelvecol">
-    <input class="left-input" type="text" name="first_name" placeholder="Primeiro nome*" required>
-    <input class="right-input" type="text" name="last_name" placeholder="Sobrenome*" required>
-  </div>
-  
-  <div class="twelvecol">
-    <input class="left-input" type="email" name="email" placeholder="E-mail*" required>
-    <input class="right-input" type="tel" name="phone" placeholder="Telefone*" pattern="[0-9]{10,15}" required>
-  </div>
-  
-  <div class="twelvecol">
-    <input class="full-input" type="text" name="subject" placeholder="Assunto*" required>
-  </div>
-  
-  <div class="twelvecol">
-    <textarea name="message" placeholder="Mensagem..." rows="4" class="contact-comment" required></textarea>
-  </div>
-
-  <!-- Botão de envio -->
-<input type="submit" id="submit-button" value="Enviar E-mail" class="contact-submit" disabled>
-</form>
-
-<!-- Link fora do formulário -->
-<a href="https://eltonapereira.github.io/site-notton-oficial/"></a>
-
-
-  <!-- Checkbox de aceitação dos Termos e Condições -->
-<div class="twelvecol">
-  <label class="checkbox-label">
-    <input type="checkbox" id="accept-terms" required>
-    Eu li e concordo com os <a href="termos.html" target="_blank">Termos e Condições</a> e a 
-    <a href="privacidade.html" target="_blank">Política de Privacidade</a>.
-  </label><br>
-</div>
-
+                                <form action="https://formsubmit.co/ton-raissa@hotmail.com" method="POST" class="contact">
+                                  <!-- Proteção contra spam -->
+                                  <input type="hidden" name="_captcha" value="false">
+                                
+                                  <!-- Redirecionamento para a página de agradecimento -->
+                                <input type="hidden" name="_next" value="https://eltonapereira.github.io/site-notton/agradecimento.html">
+                                  <!-- Campos do formulário -->
+                                  <div class="twelvecol">
+                                    <input class="left-input" type="text" name="first_name" placeholder="Primeiro nome*" required>
+                                    <input class="right-input" type="text" name="last_name" placeholder="Sobrenome*" required>
+                                  </div>
+                                  
+                                  <div class="twelvecol">
+                                    <input class="left-input" type="email" name="email" placeholder="E-mail*" required>
+                                    <input class="right-input" type="tel" name="phone" placeholder="Telefone*" pattern="[0-9]{10,15}" required>
+                                  </div>
+                                  
+                                  <div class="twelvecol">
+                                    <input class="full-input" type="text" name="subject" placeholder="Assunto*" required>
+                                  </div>
+                                  
+                                  <div class="twelvecol">
+                                    <textarea name="message" placeholder="Mensagem..." rows="4" class="contact-comment" required></textarea>
+                                  </div>
+                                
+                                  <!-- Botão de envio -->
+                                <input type="submit" id="submit-button" value="Enviar E-mail" class="contact-submit" disabled>
+                                </form>
+                                
+                                <!-- Link fora do formulário -->
+                                <a href="https://eltonapereira.github.io/site-notton-oficial/"></a>
+                                
+                                
+                                  <!-- Checkbox de aceitação dos Termos e Condições -->
+                                <div class="twelvecol">
+                                  <label class="checkbox-label">
+                                    <input type="checkbox" id="accept-terms" required>
+                                    Eu li e concordo com os <a href="termos.html" target="_blank">Termos e Condições</a> e a 
+                                    <a href="privacidade.html" target="_blank">Política de Privacidade</a>.
+                                  </label><br>
+                                </div>
                                 <!--end contact form -->
                             
                             </div>
@@ -264,45 +248,16 @@
                             <div class="callbacks_container nomargin">
                             
                                 <ul class="rslides" id="slider4">
-                                    
-                                    <li>
-                                      <img src="lib//img contato/ssa.jpg" alt="botar fotos de ponto turistico de salvador em 4k">
-                                    </li>
-                                    
-                                    <li>
-                                      <img src="lib/img contato/salvador.jpg" alt="">
-                                    </li>
-                                    
-                                    <li>
-                                      
-                                      <img src="lib//img contato/pelo.jpg" alt="botar fotos de ponto turistico de salvador em 4k">
-                                    </li>
-                                    
-                                    <li>
-                                      <img src="lib/img contato/itapuã.webp" alt="botar fotos de ponto turistico de salvador em 4k">
-                                    </li>
-                                    
-                                    <li>
-                                      <img src="lib/img contato/pelourinho.jpg" alt="botar fotos de ponto turistico de salvador em 4k">
-
-                                    </li>
-                                    <li>
-                                      <img src="lib/img contato/forte.jpg" alt="botar fotos de ponto turistico de salvador em 4k">
-                                    </li>
-                                    <li>
-                                      <img src="lib/img contato/farol barra.jpeg" alt="botar fotos de ponto turistico de salvador em 4k">
-                                    </li>
-                                    <li>
-                                      <img src="lib/img contato/elevador noite.jpg" alt="botar fotos de ponto turistico de salvador em 4k">
-                                    </li>
-
-                                    <li>
-                                      <img src="lib/img contato/elevador lacerda.jpg" alt="botar fotos de ponto turistico de salvador em 4k">
-                                    </li>
-                                    <li>
-                                      <img src="lib/img contato/comercio.jpg" alt="botar fotos de ponto turistico de salvador em 4k">
-                                    </li>
-                                    
+                                    <li><img src="lib//img contato/ssa.jpg" alt="Ponto turístico de Salvador"></li>
+                                    <li><img src="lib/img contato/salvador.jpg" alt="Ponto turístico de Salvador 2"></li>
+                                    <li><img src="lib//img contato/pelo.jpg" alt="Ponto turístico de Salvador 3"></li>
+                                    <li><img src="lib/img contato/itapuã.webp" alt="Ponto turístico de Salvador 4"></li>
+                                    <li><img src="lib/img contato/pelourinho.jpg" alt="Ponto turístico de Salvador 5"></li>
+                                    <li><img src="lib/img contato/forte.jpg" alt="Ponto turístico de Salvador 6"></li>
+                                    <li><img src="lib/img contato/farol barra.jpeg" alt="Ponto turístico de Salvador 7"></li>
+                                    <li><img src="lib/img contato/elevador noite.jpg" alt="Ponto turístico de Salvador 8"></li>
+                                    <li><img src="lib/img contato/elevador lacerda.jpg" alt="Ponto turístico de Salvador 9"></li>
+                                    <li><img src="lib/img contato/comercio.jpg" alt="Ponto turístico de Salvador 10"></li>
                                 </ul>
                                 
                             </div>
@@ -393,50 +348,15 @@
                                                 
                                     <!--begin photostream -->
                                     <ul class="photostream">
-                                  <li>
-                                    <a href="lib/imagem pj contato/02.jpg" class="prettyPhoto[gallery3]">
-                                      <img src="lib/imagem pj contato/02.jpg" alt="Imagem 1">
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a href="lib/imagem pj contato/acai di casa.jpg" class="prettyPhoto[gallery3]">
-                                      <img src="lib/imagem pj contato/acai di casa.jpg" alt="Imagem 2">
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a href="lib/imagem pj contato/BFCC.png" class="prettyPhoto[gallery3]">
-                                      <img src="lib/imagem pj contato/BFCC.png" alt="Imagem 3">
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a href="lib/imagem pj contato/fff.jpg" class="prettyPhoto[gallery3]">
-                                      <img src="lib/imagem pj contato/fff.jpg" alt="Imagem 4">
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a href="lib/imagem pj contato/KONG BFC.jpg" class="prettyPhoto[gallery3]">
-                                      <img src="lib/imagem pj contato/KONG BFC.jpg" alt="Imagem 5">
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a href="lib/imagem pj contato/logo DO CRIATIVOS.png" class="prettyPhoto[gallery3]">
-                                      <img src="lib/imagem pj contato/logo DO CRIATIVOS.png" alt="Imagem 6">
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a href="lib/imagem pj contato/UDISON.jpg" class="prettyPhoto[gallery3]">
-                                      <img src="lib/imagem pj contato/UDISON.jpg" alt="Imagem 7">
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a href="lib/imagem pj contato/ano novo.PNG" class="prettyPhoto[gallery3]">
-                                      <img src="lib/imagem pj contato/ano novo.PNG" alt="Imagem 8">
-                                    </a>
-                                  </li>
-                                </ul>
-
-
-
+                                      <li><a href="lib/imagem pj contato/02.jpg" class="prettyPhoto[gallery3]"><img src="lib/imagem pj contato/02.jpg" alt="Imagem 1"></a></li>
+                                      <li><a href="lib/imagem pj contato/acai di casa.jpg" class="prettyPhoto[gallery3]"><img src="lib/imagem pj contato/acai di casa.jpg" alt="Imagem 2"></a></li>
+                                      <li><a href="lib/imagem pj contato/BFCC.png" class="prettyPhoto[gallery3]"><img src="lib/imagem pj contato/BFCC.png" alt="Imagem 3"></a></li>
+                                      <li><a href="lib/imagem pj contato/fff.jpg" class="prettyPhoto[gallery3]"><img src="lib/imagem pj contato/fff.jpg" alt="Imagem 4"></a></li>
+                                      <li><a href="lib/imagem pj contato/KONG BFC.jpg" class="prettyPhoto[gallery3]"><img src="lib/imagem pj contato/KONG BFC.jpg" alt="Imagem 5"></a></li>
+                                      <li><a href="lib/imagem pj contato/logo DO CRIATIVOS.png" class="prettyPhoto[gallery3]"><img src="lib/imagem pj contato/logo DO CRIATIVOS.png" alt="Imagem 6"></a></li>
+                                      <li><a href="lib/imagem pj contato/UDISON.jpg" class="prettyPhoto[gallery3]"><img src="lib/imagem pj contato/UDISON.jpg" alt="Imagem 7"></a></li>
+                                      <li><a href="lib/imagem pj contato/ano novo.PNG" class="prettyPhoto[gallery3]"><img src="lib/imagem pj contato/ano novo.PNG" alt="Imagem 8"></a></li>
+                                    </ul>
                                     <!--end photostream -->
                                                                                                
                                 </div>
@@ -495,141 +415,70 @@
     </div>
     <!--! end of #container -->
      
-    <!-- scripts concatenated and minified via ant build script-->
-    <script src="lib/js/modernizr-2.6.1.min.js"></script>
-    <script src="lib/js/conditional.js"></script>
-    <script src="lib/js/prettyPhoto/js/jquery.prettyPhoto.js"></script>
-    <script src="lib/js/jquery.isotope.min.js"></script>
-    <script src="lib/js/script.js"></script>
+    <!-- OTIMIZAÇÃO: Adicionado 'defer' a todos os scripts -->
+    <script src="lib/js/modernizr-2.6.1.min.js" defer></script>
+    <script src="lib/js/conditional.js" defer></script>
+    <script src="lib/js/prettyPhoto/js/jquery.prettyPhoto.js" defer></script>
+    <script src="lib/js/jquery.isotope.min.js" defer></script>
+    <script src="lib/js/script.js" defer></script>
+    <script src="lib/js/jquery.nav.js" defer></script>
+    <script src="lib/js/tinynav.min.js" defer></script>
+    <script type="text/javascript" src="lib/js/jquery.sticky.js" defer></script>
+    <script src="lib/js/jquery.placeholder.js" type="text/javascript" defer></script>
+    <script src="lib/js/responsiveslides.min.js" defer></script>
+    <script src="lib/js/jquery.mapmarker.js" defer></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js" defer></script>
     
-    <!-- begin menu color script-->
-    <script src="lib/js/jquery.nav.js"></script>
-	<script>
-	$(document).ready(function() {
-		$('#nav').onePageNav({
-		filter: ':not(.external)',
-		scrollThreshold: 0.25
-		});
-	});
-	</script>
-    <!-- begin menu color script-->
-    
-    <!-- begin responsive menu script-->
-    <script src="lib/js/tinynav.min.js"></script>
     <script>
-		$(function () {
-	
-		  // TinyNav.js 2
-		  $('#nav').tinyNav({
-			header: '-- Navigation --' // Writing any title with this option triggers the header
-		  });
-	
-		});
-	  </script>
-    <!-- end responsive menu script-->
-    
-    <!-- begin jquery.sticky script-->
-    <script type="text/javascript" src="lib/js/jquery.sticky.js"></script>
-		<script>
-        $(window).load(function(){
-          $("#header_wrapper").sticky({ topSpacing: 0 });
+    document.addEventListener("DOMContentLoaded", function() {
+        var map = L.map('g_map_380').setView([-12.9143, -38.4578], 16); // Coordenadas ajustadas para Salvador, Bahia
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '© <a href="https://openstreetmap.org">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        L.marker([-12.9143, -38.4578]).addTo(map) // Coordenadas ajustadas para Salvador
+          .bindPopup("Salvador, Bahia, Brasil")
+          .openPopup();
+          
+        $('#nav').onePageNav({
+            filter: ':not(.external)',
+            scrollThreshold: 0.25
         });
+        
+        $('#nav').tinyNav({
+            header: '-- Navigation --'
+        });
+        
+        $("#header_wrapper").sticky({ topSpacing: 0 });
+        
+        $.placeholder.shim();
+        
+        $("#slider4, #slider3").responsiveSlides({
+            auto: true,
+            pager: false,
+            nav: true,
+            pause: true,
+            speed: 500,
+            timeout: 9000,
+            namespace: "callbacks"
+        });
+
+        const checkbox = document.getElementById("accept-terms");
+        const submitButton = document.getElementById("submit-button");
+
+        function toggleSubmitButton() {
+            submitButton.disabled = !checkbox.checked;
+        }
+
+        checkbox.addEventListener("change", toggleSubmitButton);
+        toggleSubmitButton();
+    });
     </script>
-    <!-- end jquery.sticky script-->
-  
-    <!--begin placeholder script -->
-    <script src="lib/js/jquery.placeholder.js" type="text/javascript"></script>
-    <script>
-		$(function(){
-			$.placeholder.shim();
-		});
-	</script>
-    <!--end placeholder script -->
     
-    <!-- begin slider script-->
-    <script src="lib/js/responsiveslides.min.js"></script>
-  	<script>
-		// You can also use "$(window).load(function() {"
-		$(function () {
-	
-		  // Slideshow 4
-		  $("#slider4, #slider3").responsiveSlides({
-			auto: true,
-			pager: false,
-			nav: true,
-			pause: true,
-			speed: 500,
-			timeout: 9000,
-			namespace: "callbacks",
-			before: function () {
-			  $('.events').append("<li>before event fired.</li>");
-			},
-			after: function () {
-			  $('.events').append("<li>after event fired.</li>");
-			}
-		  });
-	
-		});
-  	</script>
-    <!-- end slider script-->
-    
-    <!-- begin map script-->
-    <script src="lib/js/jquery.mapmarker.js"></script>
-    <script type="text/javascript">
-	(function($){
-		$(document).ready(function() {		
-			var myMarkers = {"markers": [ {"latitude": "51.507207", "longitude": "-0.127223"}
-				]
-			};		
-			$("#g_map_380").mapmarker({
-				center: "51.507207,-0.127223",	
-				zoom: 15,		
-				controls: false,
-				mapType: 'ROADMAP',
-				scrollwheel: false,
-				draggable: true,
-				doubleclickzoom: true,
-				customMarkers: true,
-				markers: myMarkers,
-				styling: 1,
-				featureType: "all",
-				elementType: "all",
-				visibility: "on",
-				invert_lightness: true,
-				color: "",
-				hue: "",
-				saturation: -100,
-				lightness: 10,
-				gamma: 1
-			});
-		});
-	})(jQuery);
-	</script>
-    <!-- end map script-->
-    
-    <!-- end scripts-->
-    <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const checkbox = document.getElementById("accept-terms");  // O checkbox
-    const submitButton = document.getElementById("submit-button");  // O botão de envio
-
-    // Função que ativa/desativa o botão de envio
-    function toggleSubmitButton() {
-      submitButton.disabled = !checkbox.checked;  // Desabilita o botão se o checkbox não estiver marcado
-    }
-
-    // Chama a função toda vez que o checkbox for alterado
-    checkbox.addEventListener("change", toggleSubmitButton);
-
-    // Chama a função uma vez para garantir que o botão comece no estado correto
-    toggleSubmitButton();
-  });
-</script>
-<!-- ============================================= -->
-  <!-- CÓDIGO DO GTRANSLATE                            -->
-  <!-- ============================================= -->
-  <div class="gtranslate_wrapper"></div>
-  <script>window.gtranslateSettings = {"default_language":"pt","languages":["pt","en","fr","de","it","es"],"wrapper_selector":".gtranslate_wrapper","flag_size":24,"flag_style":"3d"}</script>
-  <script src="https://cdn.gtranslate.net/widgets/latest/flags.js" defer></script>
+    <!-- GTranslate -->
+    <div class="gtranslate_wrapper"></div>
+    <script>window.gtranslateSettings = {"default_language":"pt","languages":["pt","en","fr","de","it","es"],"wrapper_selector":".gtranslate_wrapper","flag_size":24,"flag_style":"3d"}</script>
+    <script src="https://cdn.gtranslate.net/widgets/latest/flags.js" defer></script>
 </body>
 </html>

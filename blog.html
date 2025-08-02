@@ -11,22 +11,21 @@
   <!-- Favicon -->
   <link rel="shortcut icon" href="lib/images/favicon.png">
 
-  <!-- Ícones (Font Awesome) -->
+  <!-- Ícones (Font Awesome) - Essencial para os ícones do topo -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <!-- Folha de Estilo Principal (Necessária para o cabeçalho e rodapé) -->
+  <!-- Folha de Estilo Principal (Necessária para o cabeçalho e layout básico) -->
   <link rel="stylesheet" href="lib/css/style.css">
 
-  <!-- ========================================================== -->
-  <!-- === ESTILO DA IMAGEM DE FUNDO ADICIONADO AQUI === -->
-  <!-- ========================================================== -->
+  <!-- OTIMIZAÇÃO: Estilo da imagem de fundo com correção -->
   <style>
     body {
-      background-image: url('lib/images/'); /* <-- TROQUE PELO NOME DA SUA IMAGEM */
-      background-size: cover; /* Faz a imagem cobrir toda a tela */
-      background-position: center center; /* Centraliza a imagem */
-      background-repeat: no-repeat; /* Impede que a imagem se repita */
-      background-attachment: fixed; /* Deixa a imagem fixa durante o scroll */
+      /* IMPORTANTE: Substitua 'SUA-IMAGEM-DE-FUNDO.jpg' pelo nome do arquivo de imagem que você quer usar. */
+      background-image: url('lib/images/SUA-IMAGEM-DE-FUNDO.jpg');
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
     }
   </style>
 
@@ -39,93 +38,36 @@
     <!--begin container -->
     <div id="container">
     
-        <!--begin top_contact section -->
+        <!-- Cabeçalho e contatos no topo (mantidos para consistência visual) -->
         <section id="top_contact">
-                                    
-            <!--begin top_contact_inner -->
             <div class="top_contact_inner">
-                                    
-                <!--begin row -->
                 <div class="row">
-                    
-                    <!--begin twelvecol -->
                     <div class="twelvecol"> 
-                            
-                        <!--begin fivecol -->
                         <div class="fivecol"> 
-                        
                             <ul class="social_details">
-                                <li>
-                                    <a href="https://wa.me/5571984204564" target="_blank" rel="noopener noreferrer">
-                                    	<i class="fab fa-whatsapp"></i>  WhatsApp
-                                    </a>
-                                </li>
-                                <li>
-                                	<a href="https://www.instagram.com/nottonsites/" target="_blank" rel="noopener noreferrer">
-                                    	<i class="fab fa-instagram"></i>  Instagram
-                                    </a>
-                                </li>
-                                <li>
-                                	<a href="#">
-                                    	<i class="fab fa-facebook-f"></i>  Facebook  
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                    	<i class="fab fa-youtube"></i> YouTube  
-                                    </a>
-                                </li>
+                                <li><a href="https://wa.me/5571984204564" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://www.instagram.com/nottonsites/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i> Instagram</a></li>
+                                <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                                <li><a href="#"><i class="fab fa-youtube"></i> YouTube</a></li>
                             </ul>
-                             
                         </div>
-                        <!--end fivecol -->
-                        
-                        <!--begin sevencol -->
                         <div class="sevencol last"> 
-                        	
                             <ul class="company_details">
-                                <li>
-                                	<a href="mailto:ton-raissa@hotmail.com"><i class="fas fa-envelope"></i> ton-raissa@hotmail.com</a>
-                                </li>
-                                <li><i class="fas fa-phone"></i>  +55 71 98420-4564</li>
-                               <li>
-                                  <a href="https://www.google.com/maps?q=R.+Brumado+Cj+Rec+Lagoa,+23+-+Nova+Brasília+de+Valéria,+Ssa-Ba,+Brasil" target="_blank" rel="noopener noreferrer">
-                                    <i class="fas fa-map-marker-alt"></i>  R. Brumado Cj Rec da Lagoa, Ssa-Ba | Brasil </a>
-                                </li>
+                                <li><a href="mailto:ton-raissa@hotmail.com"><i class="fas fa-envelope"></i> ton-raissa@hotmail.com</a></li>
+                                <li><i class="fas fa-phone"></i> +55 71 98420-4564</li>
+                               <li><a href="https://www.google.com/maps?q=R.+Brumado+Cj+Rec+Lagoa,+23+-+Nova+Brasília+de+Valéria,+Ssa-Ba,+Brasil" target="_blank" rel="noopener noreferrer"><i class="fas fa-map-marker-alt"></i> R. Brumado Cj Rec da Lagoa, Ssa-Ba | Brasil</a></li>
                             </ul>
-                             
                         </div>
-                        <!--end sevencol -->
-                         
                 	</div>
-                    <!--end twelvecol -->
-                    
             	</div>
-                <!--end row -->
-                
             </div>
-            <!--end top_contact_inner -->
-            
         </section>
-        <!--end top_contact section -->
         
-        <!--begin header_wrapper -->
         <header id="header_wrapper">
-            
-            <!--begin header -->    
             <div id="header">
-                
-                <!--begin row -->
                 <div class="row">
-                    
-                    <!--begin twelvecol -->
                     <div class="twelvecol">  
-                    
-                        <!--begin logo -->            
                         <a href="index.html" id="logo"><img src="lib/images/logo-inicial.png" alt="Logo da NottoN" width="150"></a>
-                        <!--end logo -->
-                        
-                        <!--begin nav -->
                         <ul id="nav">
                             <li><a href="index.html"><i class="icon-home"></i><br>Início</a></li>
                             <li><a href="about.html"><i class="icon-user"></i><br>Sobre Nós</a></li>
@@ -133,21 +75,12 @@
                             <li class="current"><a href="blog.html"><i class="icon-cogs"></i><br>Blog</a></li>
                             <li class="last"><a href="contact.html"><i class="icon-envelope-alt"></i><br>Contato</a></li>
                         </ul>
-                        <!--end nav -->
-                                                
                     </div>
-                    <!--end twelvecol -->
-                
                 </div>
-                <!--end row -->
-                    
             </div>
-            <!--end header -->
-            
         </header>
-        <!--end header_wrapper -->
 
-        <!-- ===== SEÇÃO EM CONSTRUÇÃO ===== -->
+        <!-- Seção "Em Construção" (mantida) -->
         <section id="construction" style="display: flex; justify-content: center; align-items: center; min-height: 60vh; text-align: center; color: white; padding: 20px;">
             <div>
                 <h1 style="font-size: 8vw; font-weight: bold; text-transform: uppercase; text-shadow: 3px 3px 10px rgba(0,0,0,0.7);">
@@ -156,17 +89,14 @@
                 <p style="font-size: 2vw; text-shadow: 2px 2px 5px rgba(0,0,0,0.7);">Nosso blog está em construção. Em breve, compartilharemos artigos, dicas e novidades sobre web <br><br> sites, desenvolvimento e marketing digital para o seu negócio.</p>
             </div>
         </section>
-        <!-- ===== FIM DA SEÇÃO EM CONSTRUÇÃO ===== -->
     
-        <!--begin footer (REMOVI O FOOTER PARA UMA PÁGINA "EM CONSTRUÇÃO" MAIS LIMPA, MAS VOCÊ PODE COLOCÁ-LO DE VOLTA SE QUISER) -->
-        
     </div><!--! end of #container -->
                     
-    <!-- Scripts essenciais para o menu mobile -->
+    <!-- OTIMIZAÇÃO: Scripts mínimos necessários para o menu mobile e tradutor -->
     <script src="lib/js/jquery-1.10.2.min.js" defer></script>
     <script src="lib/js/tinynav.min.js" defer></script>
     <script>
-		$(function () {
+		document.addEventListener('DOMContentLoaded', function() {
 		  $('#nav').tinyNav({
 			header: '-- Navigation --'
 		  });
