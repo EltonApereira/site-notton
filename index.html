@@ -16,6 +16,62 @@
   <noscript><link rel="stylesheet" href="lib/js/prettyPhoto/css/prettyPhoto.css"></noscript>
   <script src="lib/js/jquery-1.10.2.min.js"></script>
   <script src="lib/js/jquery-migrate-1.2.1.js"></script>
+
+  <!-- === CÓDIGO DO EFEITO DE BRILHO (MAIS INTENSO) === -->
+<style>
+  /* 1. Prepara o contêiner da logo */
+  #logo {
+    position: relative; /* Essencial para posicionar as partículas */
+    overflow: hidden;   /* Garante que o brilho não vaze para fora da logo */
+  }
+
+  /* 2. Estilos comuns para ambas as partículas de brilho */
+  #logo::before,
+  #logo::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background: white;
+    opacity: 0; /* Começam invisíveis */
+  }
+
+  /* 3. Configura a PRIMEIRA partícula de brilho (maior) */
+  #logo::before {
+    width: 10px;
+    height: 10px;
+    box-shadow: 0 0 10px white, 0 0 20px rgb(150, 94, 94), 0 0 30px #fff0b3; /* Sombra branca com um leve tom dourado */
+    
+    /* Animação da primeira partícula */
+    animation: sparkle-one 3.5s ease-in-out 2s infinite;
+  }
+
+  /* 4. Configura a SEGUNDA partícula de brilho (menor e mais rápida) */
+  #logo::after {
+    width: 6px;
+    height: 6px;
+    box-shadow: 0 0 8px white, 0 0 15px white;
+    
+    /* Animação da segunda partícula (com um atraso diferente para não sincronizar) */
+    animation: sparkle-two 3.5s ease-in-out 2.7s infinite;
+  }
+
+
+  /* 5. Define a animação da PRIMEIRA partícula */
+  @keyframes sparkle-one {
+    0%   { opacity: 0; transform: translate(10px, 40px); }
+    25%  { opacity: 1; transform: translate(80px, 10px); }
+    50%  { opacity: 0; transform: translate(130px, 35px); }
+    100% { opacity: 0; }
+  }
+
+  /* 6. Define a animação da SEGUNDA partícula */
+  @keyframes sparkle-two {
+    0%   { opacity: 0; transform: translate(140px, 15px); }
+    25%  { opacity: 1; transform: translate(50px, 35px); }
+    50%  { opacity: 0; transform: translate(20px, 5px); }
+    100% { opacity: 0; }
+  }
+</style>
 </head>
 <body>
   <img class="vegas-background" src="lib/images/ft02.webp" alt="Fundo da página com imagem de um avião sobrevoando montanhas" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; object-fit: cover; z-index: -1;">
@@ -33,7 +89,7 @@
             </div>
             <div class="sevencol last"> 
                 <ul class="company_details">
-                    <li><a href="mailto:ton-raissa@hotmail.com"><i class="fas fa-envelope"></i> ton-raissa@hotmail.com</a></li>
+                    <li><a href="mailto:ton-raissa@hotmail.com"><i class="fas fa-envelope"></i> contato@nottoncriadordesites.com</a></li>
                     <li><i class="fas fa-phone"></i>  +55 71 98420-4564</li>
                    <li><a href="https://www.google.com/maps?q=R.+Brumado+Cj+Rec+Lagoa,+23+-+Nova+Brasília+de+Valéria,+Ssa-Ba,+Brasil" target="_blank" rel="noopener"><i class="fas fa-map-marker-alt"></i>  R. Brumado Cj Rec da Lagoa, Ssa-Ba | Brasil</a></li>
                 </ul>
@@ -54,7 +110,7 @@
     </header>
     <section id="home">
         <div class="home_box">
-            <h1 class="slogan">Bem-vindo<br><br><span class="typing">Seu Negócio em um <br>Site de Alta Performance!</span></h1>                                
+            <h1 class="slogan">Bem-vindo<br><span class="typing">obtenha um site de alta performance <br>para impulsionar o seu negócio!</span></h1>                                
         </div>
     </section>
     <section id="services">
