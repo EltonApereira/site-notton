@@ -3,177 +3,146 @@
 <head>
   <meta charset="utf-8">  
   <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />  
-  <meta name="description" content="Explore nosso portfólio de web design. Veja exemplos de sites, lojas virtuais, portais e landing pages que desenvolvemos para diversos segmentos de negócio.">  
-  <title>Portfólio | Projetos de Criação de Sites e Web Design da NottoN</title>
-
-  <!-- OTIMIZAÇÃO: Prioriza o carregamento da imagem de fundo (Lembre-se de converter para .webp) -->
+  <title>NottoN | Desenvolvimento Web e Criação de Sites Profissionais</title>
+  <meta name="description" content="Transformamos suas ideias em realidade digital. Especialistas em criação de sites personalizados, web design, identidade visual e soluções web de alta performance.">
+  <meta name="author" content="NottoN">
   <link rel="preload" as="image" href="lib/images/ft02.webp">
-
-  <!-- Favicon -->
   <link rel="shortcut icon" href="lib/images/favicon.png">
-
-  <!--[if lte IE 9]>
-    <link rel="stylesheet" href="lib/css/ie.css" type="text/css" media="screen" />
-  <![endif]-->
-
-  <!-- Ícones e CSS Essencial -->
+  <!--[if lte IE 9]><link rel="stylesheet" href="lib/css/ie.css" type="text/css" media="screen" /><![endif]-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <!-- OTIMIZAÇÃO: Pré-carrega o arquivo principal da fonte para exibição mais rápida -->
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
-  
   <link rel="stylesheet" href="lib/css/style.css">
-  <!-- O Isotope CSS é crítico para o layout inicial do portfólio, por isso não é adiado -->
-  <link rel="stylesheet" href="lib/css/isotope.css">
-  
-  <!-- OTIMIZAÇÃO: CSS não essencial carregado de forma assíncrona -->
-  <link href="lib/css/responsiveslides.css" rel="stylesheet" media="print" onload="this.media='all'">
-  <noscript><link href="lib/css/responsiveslides.css" rel="stylesheet"></noscript>
   <link rel="stylesheet" href="lib/js/prettyPhoto/css/prettyPhoto.css" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="lib/js/prettyPhoto/css/prettyPhoto.css"></noscript>
-  
-  <style>
-    /* Remove o efeito de fade nos vídeos para evitar problemas de performance */
-    .view-first .mask {
-      transition: none !important;
-    }
-  </style>
-
-  <!-- jQuery -->
   <script src="lib/js/jquery-1.10.2.min.js"></script>
   <script src="lib/js/jquery-migrate-1.2.1.js"></script>
 </head>
-
 <body>
-  <!-- Lembrete: Converta a imagem de fundo para .webp -->
   <img class="vegas-background" src="lib/images/ft02.webp" alt="Fundo da página com imagem de um avião sobrevoando montanhas" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; object-fit: cover; z-index: -1;">
-    <div id="dotted_bg"></div>
-	
-    <div id="container">
-        <section id="top_contact">
-            <div class="top_contact_inner">
-                <div class="row">
-                    <div class="twelvecol"> 
-                        <div class="fivecol"> 
-                            <ul class="social_details">
-                                <li><a href="https://wa.me/5571984204564" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i>  WhatsApp</a></li>
-                                <li><a href="https://www.instagram.com/nottonsites/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i>  Instagram</a></li>
-                                <li><a href="#"><i class="fab fa-facebook-f"></i>  Facebook</a></li>
-                                <li><a href="#"><i class="fab fa-youtube"></i> YouTube</a></li>
-                            </ul>
-                        </div>
-                        <div class="sevencol last"> 
-                            <ul class="company_details">
-                                <li><a href="mailto:ton-raissa@hotmail.com"><i class="fas fa-envelope"></i> ton-raissa@hotmail.com</a></li>
-                                <li><i class="fas fa-phone"></i> +55 71 98420-4564</li>
-                               <li><a href="https://www.google.com/maps?q=R.+Brumado+Cj+Rec+Lagoa,+23+-+Nova+Brasília+de+Valéria,+Ssa-Ba,+Brasil" target="_blank" rel="noopener"><i class="fas fa-map-marker-alt"></i> R. Brumado Cj Rec da Lagoa, Ssa-Ba | Brasil</a></li>
-                            </ul>
-                        </div>
-                	</div>
-            	</div>
+  <div id="dotted_bg"></div>
+  <div id="container">
+    <section id="top_contact">
+        <div class="top_contact_inner"><div class="row"><div class="twelvecol"> 
+            <div class="fivecol"> 
+                <ul class="social_details">
+                    <li><a href="https://wa.me/5571984204564" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i>  WhatsApp</a></li>
+                    <li><a href="https://www.instagram.com/nottonsites/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i>  Instagram</a></li>
+                    <li><a href="#"><i class="fab fa-facebook-f"></i>  Facebook</a></li>
+                    <li><a href="#"><i class="fab fa-youtube"></i> YouTube</a></li>
+                </ul>
             </div>
-        </section>
-        
-        <header id="header_wrapper">
-            <div id="header">
-                <div class="row">
-                    <div class="twelvecol">  
-                        <a href="index.html" id="logo"><img src="lib/images/logo-inicial.png" alt="Logo da NottoN" width="150" height="45"></a>
-                        <ul id="nav">
-                            <li><a href="index.html"><i class="icon-home"></i><br>Início</a></li>
-                            <li><a href="about.html"><i class="icon-user"></i><br>Sobre Nós</a></li>
-                            <li class="current"><a href="portfolio.html"><i class="icon-camera"></i><br>Portfolio</a></li>
-                            <li><a href="blog.html"><i class="icon-cogs"></i><br>Blog</a></li>
-                            <li class="last"><a href="contact.html"><i class="icon-envelope-alt"></i><br>Contato</a></li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="sevencol last"> 
+                <ul class="company_details">
+                    <li><a href="mailto:ton-raissa@hotmail.com"><i class="fas fa-envelope"></i> ton-raissa@hotmail.com</a></li>
+                    <li><i class="fas fa-phone"></i>  +55 71 98420-4564</li>
+                   <li><a href="https://www.google.com/maps?q=R.+Brumado+Cj+Rec+Lagoa,+23+-+Nova+Brasília+de+Valéria,+Ssa-Ba,+Brasil" target="_blank" rel="noopener"><i class="fas fa-map-marker-alt"></i>  R. Brumado Cj Rec da Lagoa, Ssa-Ba | Brasil</a></li>
+                </ul>
             </div>
-        </header>
-
-        <section id="portfolio">
-            <div class="intro">
-                <h2 class="title">APAIXONADO POR CRIAR WEB SITE BONITO, MODERNO E UTILIZÁVEL!</h2>
+    	</div></div></div>
+    </section>
+    <header id="header_wrapper">
+        <div id="header"><div class="row"><div class="twelvecol">  
+            <a href="index.html" id="logo"><img src="lib/images/logo-inicial.png" alt="Logo da NottoN" width="150" height="45"></a>
+            <ul id="nav">
+                <li class="current"><a href="index.html"><i class="icon-home"></i><br>Início</a></li>
+                <li><a href="about.html"><i class="icon-user"></i><br>Sobre Nós</a></li>
+                <li><a href="portfolio.html"><i class="icon-camera"></i><br>Portfolio</a></li>
+                <li><a href="blog.html"><i class="icon-cogs"></i><br>Blog</a></li>
+                <li class="last"><a href="contact.html"><i class="icon-envelope-alt"></i><br>Contato</a></li>
+            </ul>
+        </div></div></div>
+    </header>
+    <section id="home">
+        <div class="home_box">
+            <h1 class="slogan">Bem-vindo<br><span class="typing">Tenha um site de alta performance <br>para impulsionar o seu negócio!</span></h1>                                
+        </div>
+    </section>
+    <section id="services">
+        <div class="intro">
+            <h2 class="title">Projetamos sites tão únicos quanto suas ideias — sem fronteiras para a imaginação!</h2>
+        </div>
+        <div class="services_box"><div class="row"><div class="twelvecol">
+            <div class="threecol services_item">
+                <div class="icon_wrapper"><div class="icon_box"><i class="icon-laptop icon-8x"></i><span class="services_arrow"></span></div></div>
+                <h2>Brand-Identidade da sua Marca</h2>
+                <p>Criamos identidades visuais que comunicam propósito, personalidade e posicionamento. Da criação do nome à definição de cores, tipografia e elementos gráficos, transformamos ideias em marcas fortes, memoráveis e alinhadas com os valores do seu negócio. Acreditamos que uma marca bem construída conecta, inspira confiança e diferencia você no mercado.</p>
             </div>
-                      
-            <div class="isotope">
-                <div class="portfolio_actions" style="text-align: center; padding: 50px 0 40px 0;">
-                    <a href="https://docs.google.com/spreadsheets/d/1VUWzkvHBDTPGImtVbwZaRxKcmVSTfMev/edit?usp=sharing&ouid=104059790955700780854&rtpof=true&sd=true" class="button_red_small" target="_blank" rel="noopener" style="margin: 0 10px;">
-                        Tabela de Preços
-                    </a>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdIVbs8_eUMnMKveJlipW5cEGrG0yxu7qQm1CENLdulgf3XnQ/viewform" class="button_red_small" target="_blank" rel="noopener" style="margin: 0 10px;">
-                        Orçamento
-                    </a>
-                    <h1 style="margin-top: 40px;">Confira o Portfólio</h1>
-                </div>
-                <ul id="filter" class="option-set clearfix" style="display: none;"></ul>
-                     
-                <ul class="portfolio_list">
-                    <li class="portofolio_item_4col webapp"><div class="view view-first"><iframe width="315" height="240" src="https://www.youtube.com/embed/1cE__cVSRU0" title="Demonstração de site de manutenção automotiva" frameborder="0" allowfullscreen loading="lazy"></iframe></div><div class="portfolio_details"><h2>AUTOMÓVEL</h2><span>Modelo de site de manutenção automotivo</span><br><span class="categoria">Pagina Web</span></div></li>
-                    <li class="portofolio_item_4col webapp"><div class="view view-first"><iframe width="315" height="240" src="https://www.youtube.com/embed/SgP3g0Dknwg" title="Demonstração de portfólio para fotógrafo" frameborder="0" allowfullscreen loading="lazy"></iframe></div><div class="portfolio_details"><h2>Portfólio Pessoal PHOTOGRAFIA</h2><span>Modelo de site Portfólio Pessoal</span><br><span class="categoria">Pagina Web </span></div></li>
-                    <li class="portofolio_item_4col webapp"><div class="view view-first"><iframe width="315" height="240" src="https://www.youtube.com/embed/eXY8Kjtl22Q" title="Demonstração de site para empresa de limpeza" frameborder="0" allowfullscreen loading="lazy"></iframe></div><div class="portfolio_details"><h2>Serviços de limpeza</h2><span>Modelo de site de empresa de limpeza</span><br><span class="categoria"> Pagina Web </span></div></li>
-                    <li class="portofolio_item_4col webapp"><div class="view view-first"><iframe width="315" height="240" src="https://www.youtube.com/embed/xptKOxkH37E" title="Demonstração de site para barbearia" frameborder="0" allowfullscreen loading="lazy"></iframe></div><div class="portfolio_details"><h2>Barbearia & Salão de beleza</h2><span>Modelo de site de barbearia e salão de cabeleireiro</span><br><span class="categoria">Pagina Web & App Web</span></div></li>
-                    <li class="portofolio_item_4col webapp"><div class="view view-first"><iframe width="315" height="240" src="https://www.youtube.com/embed/lOFIw2G-Ga8" title="Demonstração de portfólio para desenvolvedor web" frameborder="0" allowfullscreen loading="lazy"></iframe></div><div class="portfolio_details"><h2>Portfólio Pessoal DESENVOLVEDOR WEB</h2><span>Modelo de site para portfolio developer</span><br><span class="categoria">Pagina Web </span></div></li>
-                    <li class="portofolio_item_4col webapp"><div class="view view-first"><iframe width="315" height="240" src="https://www.youtube.com/embed/jeUyGYrsB00" title="Demonstração de site para padaria e confeitaria" frameborder="0" allowfullscreen loading="lazy"></iframe></div><div class="portfolio_details"><h2> Padaria & Confeitaria </h2><span>Modelo de site para Padaria & Confeitaria</span><br><span class="categoria">Pagina Web & App Web</span></div></li>
-                    <li class="portofolio_item_4col webapp"><div class="view view-first"><iframe width="315" height="240" src="https://www.youtube.com/embed/4xOj-sepZZs" title="Demonstração de portfólio para fotógrafo e videomaker" frameborder="0" allowfullscreen loading="lazy"></iframe></div><div class="portfolio_details"><h2>Fotógrafo e Videomaker</h2><span>Portfólio foto de casamento entre outros</span><br><span class="categoria">Pagina Web </span></div></li>
-                    <li class="portofolio_item_4col webapp"><div class="view view-first"><iframe width="315" height="240" src="https://www.youtube.com/embed/P1x6RldSDX8" title="Demonstração de portfólio pessoal genérico" frameborder="0" allowfullscreen loading="lazy"></iframe></div><div class="portfolio_details"><h2>Portfólio Pessoal</h2><span>Modelo de site para profissional diverso</span><br><span class="categoria">Pagina Web </span></div></li>
-                    <li class="portofolio_item_4col webapp"><div class="view view-first"><iframe width="315" height="240" src="https://www.youtube.com/embed/mt7y07kFGdI" title="Demonstração de site para spa" frameborder="0" allowfullscreen loading="lazy"></iframe></div><div class="portfolio_details"><h2>Spa</h2><span>Modelo de site de spa e massoterapia </span><br><span class="categoria">Pagina Web </span></div></li>
-                    <li class="portofolio_item_4col webapp"><div class="view view-first"><iframe width="315" height="240" src="https://www.youtube.com/embed/aJ0MLoKYqVA" title="Demonstração de site para spa e salão de beleza" frameborder="0" allowfullscreen loading="lazy"></iframe></div><div class="portfolio_details"><h2>Spa e salão de beleza</h2><span>Modelo de site de salão de beleza</span><br><span class="categoria">Pagina Web </span></div></li>
-                    <li class="portofolio_item_4col webapp"><div class="view view-first"><iframe width="315" height="240" src="https://www.youtube.com/embed/_rVabVtfXuE" title="Demonstração de site para pet shop" frameborder="0" allowfullscreen loading="lazy"></iframe></div><div class="portfolio_details"><h2>Pets</h2><span>Modelo de site para loja de Pets </span><br><span class="categoria">Pagina Web </span></div></li>
-                    <li class="portofolio_item_4col webapp"><div class="view view-first"><iframe width="315" height="240" src="https://www.youtube.com/embed/OKJzKIwzNHY" title="Demonstração de site para restaurante" frameborder="0" allowfullscreen loading="lazy"></iframe></div><div class="portfolio_details"><h2>Restaurante</h2><span>Modelo de site para restaurantes em geral</span><br><span class="categoria">Pagina Web </span></div></li>
-                    <li class="portofolio_item_4col webapp"><div class="view view-first"><iframe width="315" height="240" src="https://www.youtube.com/embed/iuInf6-z_tI" title="Demonstração de site para loja de roupas infantis" frameborder="0" allowfullscreen loading="lazy"></iframe></div><div class="portfolio_details"><h2>Loja de roupas infantil</h2><span>Modelo de site loja de bebês</span><br><span class="categoria">Pagina Web </span></div></li>
-                    <li class="portofolio_item_4col webapp"><div class="view view-first"><iframe width="315" height="240" src="https://www.youtube.com/embed/Bd_fHCRNSzE" title="Demonstração de site para cafeteria e lanchonete" frameborder="0" allowfullscreen loading="lazy"></iframe></div><div class="portfolio_details"><h2>cafeteria e lanchonete em geral</h2><span>Modelo de site para cafeteria e lanchonete em geral</span><br><span class="categoria">Pagina Web </span></div></li>
-                    <li class="portofolio_item_4col webapp"><div class="view view-first"><iframe width="315" height="240" src="https://www.youtube.com/embed/PHi7C7JW0vM" title="Demonstração de e-commerce de roupas" frameborder="0" allowfullscreen loading="lazy"></iframe></div><div class="portfolio_details"><h2>E-commerce loja roupas</h2><span>Modelo de site E-commerce loja roupas</span><br><span class="categoria">Pagina Web </span></div></li>
-                </ul>     
+            <div class="threecol services_item">
+                <div class="icon_wrapper"><div class="icon_box"><i class="icon-leaf icon-8x"></i><span class="services_arrow"></span></div></div>
+                <h2>Web design</h2>
+                <p>Desenvolvemos sites únicos, modernos e totalmente personalizados para representar a essência da sua marca. Criamos interfaces responsivas, intuitivas e visualmente impactantes, pensadas para converter visitantes em clientes e gerar autoridade digital. Com foco em experiência do usuário (UX) e design de alta performance, entregamos soluções que combinam estética, funcionalidade e resultado real.</p>
             </div>
-        </section>
-        
-        <footer id="footer_wrapper">
-            <div id="footer_bottom">
-                <div class="row">
-                    <div class="twelvecol">  
-                        <p class="copyright">Copyright © 2025 NottoN Desenvolvimento Web | Todos os Direitos Reservados | <a href="termos.html" target="_blank" rel="noopener">Termos e Condições</a><a href="privacidade.html"> | Política de Privacidade</a></p>
-                    </div>
-                </div>
+            <div class="threecol services_item">
+                <div class="icon_wrapper"><div class="icon_box"><i class="icon-volume-up icon-8x"></i><span class="services_arrow"></span></div></div>
+                <h2>Desenvolvimento Web</h2>
+                <p>Criamos soluções digitais sob medida que transformam ideias em sistemas inteligentes, funcionais e escaláveis. Utilizamos as tecnologias mais atuais para desenvolver sites, sistemas web, landing pages e plataformas com alta performance, segurança e flexibilidade. No front-end, entregamos código limpo, rápido e otimizado — sempre com foco em resultado e experiência do usuário.</p>
             </div>
-        </footer>
-           
+            <div class="threecol last services_item">
+                <div class="icon_wrapper"><div class="icon_box"><i class="icon-comments icon-8x"></i><span class="services_arrow"></span></div></div>
+                <h2>Suporte</h2>
+                <p>Suporte 24 horas por dia, 7 dias por semana. Nosso compromisso vai além da entrega. Oferecemos suporte contínuo para manter seu site, sistema ou plataforma sempre atualizados, seguros e funcionando com excelência. Atuamos com rapidez, clareza e responsabilidade para garantir sua tranquilidade digital.</p>
+            </div>
+        </div></div>
+        <div class="row"><div class="twelvecol vertical_line">
+            <a class="button_red scroll_btn" href="https://docs.google.com/forms/d/e/1FAIpQLSdIVbs8_eUMnMKveJlipW5cEGrG0yxu7qQm1CENLdulgf3XnQ/viewform" target="_blank" rel="noopener">
+                Solicite um Orçamento
+            </a>  
+        </div></div></div>
+    </section>
+    <div style="background-image: url('lib/images/bbb.png'); background-size: cover; background-position: center; background-repeat: no-repeat; padding: 50px 20px; min-height: 100vh; display: flex; justify-content: center; align-items: center; text-align: center; color: white;">
+        <div style="max-width: 900px; background-color: rgba(0, 0, 0, 0.6); padding: 30px; border-radius: 10px;">
+            <span style="display: block; font-size: 1.5rem; font-style: italic; margin-bottom: 20px;">
+                Seu tempo é limitado, então não o desperdice vivendo a vida de outra pessoa. Não se deixe prender por dogmas — que é viver com os resultados do pensamento alheio. Não deixe que o barulho das opiniões alheias abafe sua voz interior. E, o mais importante, tenha a coragem de seguir seu coração e sua intuição.
+            </span>
+            <span style="display: block; font-size: 1.5rem; font-weight: bold; color: #e74c3c;">- Steve Jobs -</span>
+        </div>
     </div>
-     
-    <!-- OTIMIZAÇÃO: Adicionado 'defer' a todos os scripts -->
-    <script src="lib/js/modernizr-2.6.1.min.js" defer></script>
-    <script src="lib/js/conditional.js" defer></script>
-    <script src="lib/js/prettyPhoto/js/jquery.prettyPhoto.js" defer></script>
-    <script src="lib/js/jquery.isotope.min.js" defer></script>
-    <script src="lib/js/script.js" defer></script>
-    <script src="lib/js/jquery.nav.js" defer></script>
-    <script src="lib/js/tinynav.min.js" defer></script>
-    <script type="text/javascript" src="lib/js/jquery.sticky.js" defer></script>
-    <script src="lib/js/jquery.placeholder.js" type="text/javascript" defer></script>
-    <script src="lib/js/responsiveslides.min.js" defer></script>
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js" defer></script>
-    
-    <!-- Scripts inline unificados e executados após o DOM carregar -->
-    <script>
+    <footer id="footer_wrapper">
+        <div id="footer_bottom"><div class="row"><div class="twelvecol">  
+            <p class="copyright">Copyright © 2025 NottoN Desenvolvimento Web | Todos os Direitos Reservados | <a href="termos.html" target="_blank" rel="noopener">Termos e Condições</a><a href="privacidade.html"> | Política de Privacidade</a></p>
+        </div></div></div>
+    </footer>
+  </div>
+  <script src="lib/js/modernizr-2.6.1.min.js" defer></script>
+  <script src="lib/js/conditional.js" defer></script>
+  <script src="lib/js/prettyPhoto/js/jquery.prettyPhoto.js" defer></script>
+  <script src="lib/js/jquery.isotope.min.js" defer></script>
+  <script src="lib/js/script.js" defer></script>
+  <script src="lib/js/jquery.nav.js" defer></script>
+  <script src="lib/js/tinynav.min.js" defer></script>
+  <script src="lib/js/jquery.sticky.js" defer></script>
+  <script src="lib/js/jquery.placeholder.js" defer></script>
+  <script src="lib/js/responsiveslides.min.js" defer></script>
+  <script src="lib/js/jquery.vegas.js" defer></script>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js" defer></script>
+  <script>
     document.addEventListener("DOMContentLoaded", function() {
-        // Menu
         $('#nav').onePageNav({ filter: ':not(.external)', scrollThreshold: 0.25 });
         $('#nav').tinyNav({ header: '-- Navigation --' });
         $("#header_wrapper").sticky({ topSpacing: 0 });
-
-        // Placeholder
         $.placeholder.shim();
-
-        // Sliders (se houver algum slider nesta página)
-        $("#slider4, #slider3").responsiveSlides({
-            auto: true, pager: false, nav: true, pause: true, speed: 500,
-            timeout: 9000, namespace: "callbacks"
+        $("#slider4, #slider3").responsiveSlides({ auto: true, pager: false, nav: true, pause: true, speed: 500, timeout: 9000, namespace: "callbacks" });
+        
+        $.vegas('slideshow', {
+            backgrounds:[
+                { src:'lib/images/bg02.webp', fade:1500 }, { src:'lib/images/aviao.webp', fade:1500 },
+                { src:'lib/images/ft.webp', fade:1500 }, { src:'lib/images/ft03.webp', fade:1500 },
+                { src:'lib/images/navio.webp', fade:1500 }
+            ],
+            loading:false
         });
+
+        // OTIMIZAÇÃO DE ACESSIBILIDADE:
+        // Adiciona um atributo alt vazio a cada imagem de fundo gerada pelo Vegas.
+        // Isso informa aos leitores de tela que a imagem é decorativa.
+        $(document).on('vegaswalk', function (e, index, slide) {
+            $('.vegas-background').attr('alt', '');
+        });
+
     });
-    </script>
-    
-    <!-- GTranslate -->
-    <div class="gtranslate_wrapper"></div>
-    <script>window.gtranslateSettings = {"default_language":"pt","languages":["pt","en","fr","de","it","es"],"wrapper_selector":".gtranslate_wrapper","flag_size":24,"flag_style":"3d"}</script>
-    <script src="https://cdn.gtranslate.net/widgets/latest/flags.js" defer></script>
+  </script>
+  <div class="gtranslate_wrapper"></div>
+  <script>window.gtranslateSettings = {"default_language":"pt","languages":["pt","en","de","it","fr","es"],"wrapper_selector":".gtranslate_wrapper","flag_size":24,"flag_style":"3d"}</script>
+  <script src="https://cdn.gtranslate.net/widgets/latest/flags.js" defer></script>
 </body>
 </html>
